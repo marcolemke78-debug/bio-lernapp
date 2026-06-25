@@ -1,3 +1,11 @@
 .DS_Store
 *.log
 node_modules/
+
+# Quell-Fotos (urheberrechtlich geschuetzt) NIE ins oeffentliche Repo
+Bio/
+*.JPG
+*.jpg
+*.jpeg
+*.heic
+*.HEIC
