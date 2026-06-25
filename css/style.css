@@ -2054,6 +2054,25 @@ p {
 .reading-guide ul { margin: 0.4rem 0 0; padding-left: 1.25rem; }
 .reading-guide li { margin-bottom: 0.25rem; }
 
+/* Anklickbare SVG-Grafiken: Teil antippen -> Name + Aufgabe in der Ablage */
+.clickable-figure { margin: 1rem 0; }
+.clickable-figure .bio-part { cursor: pointer; }
+.clickable-figure .bio-part:hover { filter: brightness(1.07); }
+.clickable-figure .bio-part.bio-active { filter: drop-shadow(0 0 4px #2563EB); }
+.figure-readout {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-left: 4px solid #2563EB;
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  margin: 0.5rem auto 0;
+  max-width: 640px;
+  font-size: 0.95rem;
+  color: #475569;
+  min-height: 1.2em;
+}
+.figure-readout.filled { color: #1e3a8a; }
+
 /* Intro-Text ueber den Uebungen */
 .exercises-intro {
   background: var(--accent-light);

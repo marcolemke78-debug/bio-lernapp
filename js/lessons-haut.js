@@ -11,58 +11,104 @@
   // Eigener, schematischer Querschnitt durch die Haut mit nummerierten Bestandteilen.
   // Wird in der Erklärung (mit Legende) UND in der Übung (zum Beschriften) genutzt.
   const skinSvg = `
-    <svg viewBox="0 0 560 410" role="img" aria-label="Schematischer Querschnitt durch die Haut mit den drei Schichten und ihren Bestandteilen" style="max-width:560px;width:100%;height:auto;display:block;margin:1rem auto;background:#fff;border:1px solid #e5e7eb;border-radius:10px;font-family:sans-serif;">
-      <!-- Schichten -->
-      <rect x="80" y="40" width="400" height="26" fill="#e7c9a0"/>
-      <rect x="80" y="66" width="400" height="46" fill="#f1dab9"/>
-      <rect x="80" y="112" width="400" height="188" fill="#f6caca"/>
-      <rect x="80" y="300" width="400" height="92" fill="#fdeec0"/>
-      <line x1="80" y1="112" x2="480" y2="112" stroke="#cf9090" stroke-width="1.5"/>
-      <line x1="80" y1="300" x2="480" y2="300" stroke="#e3cd8a" stroke-width="1.5"/>
-      <!-- Fettzellen in der Unterhaut -->
-      <circle cx="130" cy="345" r="14" fill="#fbe39a" stroke="#e3cd8a"/>
-      <circle cx="175" cy="368" r="14" fill="#fbe39a" stroke="#e3cd8a"/>
-      <circle cx="300" cy="350" r="14" fill="#fbe39a" stroke="#e3cd8a"/>
-      <circle cx="445" cy="368" r="14" fill="#fbe39a" stroke="#e3cd8a"/>
-      <!-- Pigmentpunkte in der Keimschicht -->
-      <circle cx="115" cy="100" r="3.5" fill="#6b4423"/>
-      <circle cx="250" cy="103" r="3.5" fill="#6b4423"/>
-      <circle cx="340" cy="98" r="3.5" fill="#6b4423"/>
-      <!-- Haar (Schaft + Wurzel) -->
-      <rect x="196" y="14" width="9" height="262" rx="4" fill="#8b5a2b"/>
-      <ellipse cx="200" cy="280" rx="15" ry="11" fill="#6b4423"/>
-      <!-- Talgdrüse am Haarbalg -->
-      <circle cx="245" cy="160" r="15" fill="#f6c343" stroke="#d99b1c" stroke-width="1.5"/>
-      <line x1="231" y1="160" x2="205" y2="158" stroke="#d99b1c" stroke-width="2"/>
-      <!-- Schweißdrüse: Ausführungsgang + Knäuel -->
-      <path d="M 400 40 q 16 70 -4 130 q -14 46 6 78" fill="none" stroke="#5b94d6" stroke-width="3"/>
-      <circle cx="402" cy="335" r="22" fill="none" stroke="#3f74b8" stroke-width="3"/>
-      <circle cx="402" cy="335" r="12" fill="none" stroke="#3f74b8" stroke-width="3"/>
-      <!-- Blutgefäße -->
-      <path d="M 320 122 q 16 70 0 150" fill="none" stroke="#dc2626" stroke-width="3"/>
-      <path d="M 338 122 q -16 70 0 150" fill="none" stroke="#2563eb" stroke-width="3"/>
-      <!-- Tastkörperchen (Sinneszelle) -->
-      <ellipse cx="135" cy="210" rx="22" ry="14" fill="#d8b4fe" stroke="#9333ea" stroke-width="1.5"/>
-      <line x1="135" y1="210" x2="135" y2="112" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="3 3"/>
-      <!-- Schicht-Beschriftung links -->
-      <line x1="66" y1="40" x2="66" y2="112" stroke="#374151" stroke-width="2"/>
-      <line x1="66" y1="112" x2="66" y2="300" stroke="#374151" stroke-width="2"/>
-      <line x1="66" y1="300" x2="66" y2="392" stroke="#374151" stroke-width="2"/>
-      <text x="26" y="76" transform="rotate(-90 26 76)" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2937">Oberhaut</text>
-      <text x="26" y="206" transform="rotate(-90 26 206)" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2937">Lederhaut</text>
-      <text x="26" y="346" transform="rotate(-90 26 346)" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2937">Unterhaut</text>
-      <!-- Nummern-Badges -->
-      <g font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
-        <circle cx="455" cy="53" r="13" fill="#1d4ed8"/><text x="455" y="58">1</text>
-        <circle cx="455" cy="92" r="13" fill="#1d4ed8"/><text x="455" y="97">2</text>
-        <circle cx="200" cy="28" r="13" fill="#1d4ed8"/><text x="200" y="33">3</text>
-        <circle cx="270" cy="160" r="13" fill="#1d4ed8"/><text x="270" y="165">4</text>
-        <circle cx="232" cy="282" r="13" fill="#1d4ed8"/><text x="232" y="287">5</text>
-        <circle cx="402" cy="335" r="13" fill="#1d4ed8"/><text x="402" y="340">6</text>
-        <circle cx="355" cy="250" r="13" fill="#1d4ed8"/><text x="355" y="255">7</text>
-        <circle cx="170" cy="210" r="13" fill="#1d4ed8"/><text x="170" y="215">8</text>
+    <div class="clickable-figure">
+    <svg viewBox="0 0 560 410" role="img" aria-label="Schematischer Querschnitt durch die Haut mit den drei Schichten und ihren Bestandteilen" style="max-width:560px;width:100%;height:auto;display:block;margin:0 auto;background:#fff;border:1px solid #e5e7eb;border-radius:10px;font-family:sans-serif;">
+      <!-- Schichten (anklickbar) -->
+      <rect class="bio-part" data-name="Hornschicht (Oberhaut)" data-info="Äußere Schicht aus toten Zellen. Schützt vor Krankheitserregern, Austrocknung und Verletzungen." x="80" y="40" width="400" height="26" fill="#e7c9a0"/>
+      <rect class="bio-part" data-name="Keimschicht (Oberhaut)" data-info="Bildet ständig neue Hautzellen; enthält Pigment (Melanin) als Schutz vor UV-Strahlung." x="80" y="66" width="400" height="46" fill="#f1dab9"/>
+      <rect class="bio-part" data-name="Lederhaut" data-info="Mittlere Schicht mit Schweiß- und Talgdrüsen, Blutgefäßen, Haarwurzeln und Sinneszellen." x="80" y="112" width="400" height="188" fill="#f6caca"/>
+      <rect class="bio-part" data-name="Unterhaut" data-info="Besteht aus Fettgewebe: wärmt (Isolierung) und polstert den Körper." x="80" y="300" width="400" height="92" fill="#fdeec0"/>
+      <g pointer-events="none">
+        <line x1="80" y1="112" x2="480" y2="112" stroke="#cf9090" stroke-width="1.5"/>
+        <line x1="80" y1="300" x2="480" y2="300" stroke="#e3cd8a" stroke-width="1.5"/>
+        <circle cx="130" cy="345" r="14" fill="#fbe39a" stroke="#e3cd8a"/>
+        <circle cx="175" cy="368" r="14" fill="#fbe39a" stroke="#e3cd8a"/>
+        <circle cx="300" cy="350" r="14" fill="#fbe39a" stroke="#e3cd8a"/>
+        <circle cx="445" cy="368" r="14" fill="#fbe39a" stroke="#e3cd8a"/>
+        <circle cx="115" cy="100" r="3.5" fill="#6b4423"/>
+        <circle cx="250" cy="103" r="3.5" fill="#6b4423"/>
+        <circle cx="340" cy="98" r="3.5" fill="#6b4423"/>
       </g>
-    </svg>`;
+      <!-- Haar (Schaft + Wurzel) -->
+      <rect class="bio-part" data-name="Haar" data-info="Schützt und wärmt; stellt sich bei Kälte auf (Gänsehaut)." x="196" y="14" width="9" height="262" rx="4" fill="#8b5a2b"/>
+      <ellipse class="bio-part" data-name="Haarwurzel" data-info="Hier wächst das Haar nach (im Haarbalg)." cx="200" cy="280" rx="15" ry="11" fill="#6b4423"/>
+      <!-- Talgdrüse am Haarbalg -->
+      <g class="bio-part" data-name="Talgdrüse" data-info="Gibt Fett (Talg) ab - hält Haut und Haare geschmeidig und schützt vor dem Austrocknen.">
+        <circle cx="245" cy="160" r="15" fill="#f6c343" stroke="#d99b1c" stroke-width="1.5"/>
+        <line x1="231" y1="160" x2="205" y2="158" stroke="#d99b1c" stroke-width="2"/>
+      </g>
+      <!-- Schweißdrüse: Ausführungsgang + Knäuel -->
+      <g class="bio-part" data-name="Schweißdrüse" data-info="Bildet Schweiß. Beim Verdunsten kühlt das den Körper (Temperaturregelung).">
+        <path d="M 400 40 q 16 70 -4 130 q -14 46 6 78" fill="none" stroke="#5b94d6" stroke-width="3"/>
+        <circle cx="402" cy="335" r="22" fill="none" stroke="#3f74b8" stroke-width="3"/>
+        <circle cx="402" cy="335" r="12" fill="none" stroke="#3f74b8" stroke-width="3"/>
+      </g>
+      <!-- Blutgefäße -->
+      <g class="bio-part" data-name="Blutgefäß" data-info="Versorgt die Haut mit Nährstoffen und Sauerstoff und transportiert Wärme.">
+        <path d="M 320 122 q 16 70 0 150" fill="none" stroke="#dc2626" stroke-width="3"/>
+        <path d="M 338 122 q -16 70 0 150" fill="none" stroke="#2563eb" stroke-width="3"/>
+      </g>
+      <!-- Tastkörperchen (Sinneszelle) -->
+      <ellipse class="bio-part" data-name="Tastkörperchen (Sinneszelle)" data-info="Nimmt Reize wahr (Druck, Berührung) - dadurch ist die Haut ein Sinnesorgan." cx="135" cy="210" rx="22" ry="14" fill="#d8b4fe" stroke="#9333ea" stroke-width="1.5"/>
+      <g pointer-events="none">
+        <line x1="135" y1="210" x2="135" y2="112" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <line x1="66" y1="40" x2="66" y2="112" stroke="#374151" stroke-width="2"/>
+        <line x1="66" y1="112" x2="66" y2="300" stroke="#374151" stroke-width="2"/>
+        <line x1="66" y1="300" x2="66" y2="392" stroke="#374151" stroke-width="2"/>
+        <text x="26" y="76" transform="rotate(-90 26 76)" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2937">Oberhaut</text>
+        <text x="26" y="206" transform="rotate(-90 26 206)" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2937">Lederhaut</text>
+        <text x="26" y="346" transform="rotate(-90 26 346)" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2937">Unterhaut</text>
+        <g font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+          <circle cx="455" cy="53" r="13" fill="#1d4ed8"/><text x="455" y="58">1</text>
+          <circle cx="455" cy="92" r="13" fill="#1d4ed8"/><text x="455" y="97">2</text>
+          <circle cx="200" cy="28" r="13" fill="#1d4ed8"/><text x="200" y="33">3</text>
+          <circle cx="270" cy="160" r="13" fill="#1d4ed8"/><text x="270" y="165">4</text>
+          <circle cx="232" cy="282" r="13" fill="#1d4ed8"/><text x="232" y="287">5</text>
+          <circle cx="402" cy="335" r="13" fill="#1d4ed8"/><text x="402" y="340">6</text>
+          <circle cx="355" cy="250" r="13" fill="#1d4ed8"/><text x="355" y="255">7</text>
+          <circle cx="170" cy="210" r="13" fill="#1d4ed8"/><text x="170" y="215">8</text>
+        </g>
+      </g>
+    </svg>
+    <div class="figure-readout">Tipp: Tippe auf ein Teil der Haut, um Name und Aufgabe zu sehen.</div>
+    </div>`;
+
+  // Die 4 Funktionen der Haut als anklickbare Panels (Lektion 2).
+  const functionsSvg = `
+    <div class="clickable-figure">
+    <svg viewBox="0 0 520 280" role="img" aria-label="Die vier Funktionen der Haut" style="max-width:520px;width:100%;height:auto;display:block;margin:0 auto;font-family:sans-serif;">
+      <g class="bio-part" data-name="Schutz" data-info="Die Hornschicht hält Krankheitserreger, Schmutz und UV-Strahlung ab und schützt vor Austrocknung und Verletzung.">
+        <rect x="10" y="10" width="240" height="120" rx="12" fill="#eff6ff" stroke="#2563EB" stroke-width="2"/>
+        <path d="M55 38 L78 47 L78 70 Q78 92 55 102 Q32 92 32 70 L32 47 Z" fill="#bfdbfe" stroke="#2563EB" stroke-width="2"/>
+        <path d="M44 70 l8 8 l16 -18" fill="none" stroke="#1d4ed8" stroke-width="3"/>
+        <text x="170" y="66" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e3a8a">Schutz</text>
+        <text x="170" y="92" text-anchor="middle" font-size="11" fill="#64748b">tippen für mehr</text>
+      </g>
+      <g class="bio-part" data-name="Temperatur regeln" data-info="Bei Hitze kühlt Schwitzen, die Blutgefäße weiten sich. Bei Kälte verengen sie sich, Gänsehaut entsteht und das Fett der Unterhaut wärmt.">
+        <rect x="270" y="10" width="240" height="120" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+        <rect x="312" y="40" width="12" height="42" rx="6" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+        <rect x="315" y="55" width="6" height="27" fill="#dc2626"/>
+        <circle cx="318" cy="90" r="11" fill="#dc2626"/>
+        <text x="420" y="66" text-anchor="middle" font-size="17" font-weight="bold" fill="#991b1b">Temperatur regeln</text>
+        <text x="420" y="92" text-anchor="middle" font-size="11" fill="#64748b">tippen für mehr</text>
+      </g>
+      <g class="bio-part" data-name="Sinnesorgan (Fühlen)" data-info="Sinneszellen in der Lederhaut melden Druck, Berührung, Wärme, Kälte und Schmerz an das Gehirn.">
+        <rect x="10" y="150" width="240" height="120" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+        <circle cx="48" cy="210" r="7" fill="#7c3aed"/>
+        <path d="M60 196 a20 20 0 0 1 0 28" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+        <path d="M70 188 a32 32 0 0 1 0 44" fill="none" stroke="#a78bfa" stroke-width="2.5"/>
+        <text x="178" y="206" text-anchor="middle" font-size="16" font-weight="bold" fill="#5b21b6">Sinnesorgan</text>
+        <text x="178" y="228" text-anchor="middle" font-size="11" fill="#64748b">tippen für mehr</text>
+      </g>
+      <g class="bio-part" data-name="Ausscheidung" data-info="Mit dem Schweiß gibt die Haut Wasser und etwas Salz und Abfallstoffe ab.">
+        <rect x="270" y="150" width="240" height="120" rx="12" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+        <path d="M318 178 Q338 206 318 228 Q298 206 318 178 Z" fill="#a5f3fc" stroke="#0891b2" stroke-width="2"/>
+        <text x="420" y="206" text-anchor="middle" font-size="17" font-weight="bold" fill="#155e75">Ausscheidung</text>
+        <text x="420" y="228" text-anchor="middle" font-size="11" fill="#64748b">tippen für mehr</text>
+      </g>
+    </svg>
+    <div class="figure-readout">Tipp: Tippe auf eine Funktion, um mehr zu erfahren.</div>
+    </div>`;
 
   window.LESSON_DATA = (window.LESSON_DATA || []).concat([
 
@@ -219,6 +265,7 @@
           </div>
 
           <h3>Die 4 Hauptfunktionen der Haut</h3>
+          ${functionsSvg}
           <table class="icon-table">
             <tr><th>Funktion</th><th>Wie macht die Haut das?</th></tr>
             <tr><td><strong>Schutz</strong></td><td>Die Hornschicht hält Krankheitserreger, Schmutz und UV-Strahlung ab und schützt vor Austrocknung und Verletzung.</td></tr>

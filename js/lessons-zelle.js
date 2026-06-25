@@ -10,29 +10,40 @@
 
   // Einzelne Zelle mit nummerierten Grundbausteinen (Erklärung + Übung).
   const cellSvg = `
-    <svg viewBox="0 0 460 320" role="img" aria-label="Schematische Zelle mit Zellmembran, Zellplasma, Zellkern und Mitochondrien" style="max-width:460px;width:100%;height:auto;display:block;margin:1rem auto;font-family:sans-serif;">
-      <ellipse cx="230" cy="160" rx="205" ry="145" fill="#fdeaf3" stroke="#db2777" stroke-width="4"/>
+    <div class="clickable-figure">
+    <svg viewBox="0 0 460 320" role="img" aria-label="Schematische Zelle mit Zellmembran, Zellplasma, Zellkern und Mitochondrien" style="max-width:460px;width:100%;height:auto;display:block;margin:0 auto;font-family:sans-serif;">
+      <ellipse class="bio-part" data-name="Zellplasma" data-info="Die zähflüssige Grundmasse, die die Zelle ausfüllt; darin liegen alle Bauteile (die 'Werkshalle')." cx="230" cy="160" rx="203" ry="143" fill="#fdeaf3"/>
       <!-- Mitochondrien -->
-      <ellipse cx="115" cy="95" rx="32" ry="16" fill="#fca5a5" stroke="#dc2626" stroke-width="1.5"/>
-      <path d="M 92 95 q 11 -10 23 0 q 11 10 23 0" fill="none" stroke="#dc2626" stroke-width="1.5"/>
-      <ellipse cx="345" cy="225" rx="32" ry="16" fill="#fca5a5" stroke="#dc2626" stroke-width="1.5"/>
-      <path d="M 322 225 q 11 -10 23 0 q 11 10 23 0" fill="none" stroke="#dc2626" stroke-width="1.5"/>
-      <!-- Ribosomen-Punkte -->
-      <circle cx="300" cy="90" r="3.5" fill="#6b7280"/>
-      <circle cx="320" cy="110" r="3.5" fill="#6b7280"/>
-      <circle cx="120" cy="220" r="3.5" fill="#6b7280"/>
-      <circle cx="140" cy="240" r="3.5" fill="#6b7280"/>
+      <g class="bio-part" data-name="Mitochondrium" data-info="Liefert die Energie für die Zelle - das 'Kraftwerk' der Zelle.">
+        <ellipse cx="115" cy="95" rx="32" ry="16" fill="#fca5a5" stroke="#dc2626" stroke-width="1.5"/>
+        <path d="M 92 95 q 11 -10 23 0 q 11 10 23 0" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+        <ellipse cx="345" cy="225" rx="32" ry="16" fill="#fca5a5" stroke="#dc2626" stroke-width="1.5"/>
+        <path d="M 322 225 q 11 -10 23 0 q 11 10 23 0" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+      </g>
+      <!-- Ribosomen -->
+      <g class="bio-part" data-name="Ribosomen" data-info="Winzige Körnchen; hier werden Eiweiße gebaut (die 'Werkbänke').">
+        <circle cx="300" cy="90" r="3.5" fill="#6b7280"/>
+        <circle cx="320" cy="110" r="3.5" fill="#6b7280"/>
+        <circle cx="120" cy="220" r="3.5" fill="#6b7280"/>
+        <circle cx="140" cy="240" r="3.5" fill="#6b7280"/>
+      </g>
       <!-- Zellkern -->
-      <circle cx="230" cy="160" r="54" fill="#c4b5fd" stroke="#7c3aed" stroke-width="2"/>
-      <circle cx="230" cy="160" r="16" fill="#7c3aed"/>
-      <!-- Nummern-Badges -->
-      <g font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      <g class="bio-part" data-name="Zellkern" data-info="Steuerzentrale; enthält die Erbinformation (die Baupläne) - der 'Chef'.">
+        <circle cx="230" cy="160" r="54" fill="#c4b5fd" stroke="#7c3aed" stroke-width="2"/>
+        <circle cx="230" cy="160" r="16" fill="#7c3aed"/>
+      </g>
+      <!-- Zellmembran: nur der Rand ist klickbar, Innenklicks gehen ans Plasma -->
+      <ellipse class="bio-part" data-name="Zellmembran" data-info="Äußere Hülle; schützt die Zelle und regelt, was hinein- und herausgeht (das 'Tor')." cx="230" cy="160" rx="205" ry="145" fill="none" stroke="#db2777" stroke-width="4"/>
+      <!-- Nummern-Badges (Deko) -->
+      <g pointer-events="none" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
         <circle cx="408" cy="92" r="13" fill="#1d4ed8"/><text x="408" y="97">1</text>
         <circle cx="175" cy="270" r="13" fill="#1d4ed8"/><text x="175" y="275">2</text>
         <circle cx="230" cy="160" r="13" fill="#1d4ed8"/><text x="230" y="165">3</text>
         <circle cx="345" cy="225" r="13" fill="#1d4ed8"/><text x="345" y="230">4</text>
       </g>
-    </svg>`;
+    </svg>
+    <div class="figure-readout">Tipp: Tippe auf einen Zellbestandteil, um Name und Aufgabe zu sehen.</div>
+    </div>`;
 
   // Tierzelle vs. Pflanzenzelle - die 3 pflanzentypischen Teile grün hervorgehoben.
   const compareSvg = `

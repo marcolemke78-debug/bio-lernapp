@@ -10,42 +10,83 @@
 
   // Virus: Eiweißhülle + Stacheln + Erbinformation (nummeriert)
   const virusSvg = `
-    <svg viewBox="0 0 300 300" role="img" aria-label="Aufbau eines Virus mit Stacheln, Eiweißhülle und Erbinformation" style="max-width:280px;width:100%;height:auto;display:block;margin:1rem auto;font-family:sans-serif;">
-      <g stroke="#4338ca" stroke-width="3">
-        <line x1="220" y1="150" x2="238" y2="150"/><line x1="199.5" y1="199.5" x2="212.2" y2="212.2"/>
-        <line x1="150" y1="220" x2="150" y2="238"/><line x1="100.5" y1="199.5" x2="87.8" y2="212.2"/>
-        <line x1="80" y1="150" x2="62" y2="150"/><line x1="100.5" y1="100.5" x2="87.8" y2="87.8"/>
-        <line x1="150" y1="80" x2="150" y2="62"/><line x1="199.5" y1="100.5" x2="212.2" y2="87.8"/>
+    <div class="clickable-figure">
+    <svg viewBox="0 0 300 300" role="img" aria-label="Aufbau eines Virus mit Stacheln, Eiweißhülle und Erbinformation" style="max-width:280px;width:100%;height:auto;display:block;margin:0 auto;font-family:sans-serif;">
+      <g class="bio-part" data-name="Stacheln" data-info="Außen am Virus; damit dockt es an eine Wirtszelle an.">
+        <g stroke="#4338ca" stroke-width="3">
+          <line x1="220" y1="150" x2="238" y2="150"/><line x1="199.5" y1="199.5" x2="212.2" y2="212.2"/>
+          <line x1="150" y1="220" x2="150" y2="238"/><line x1="100.5" y1="199.5" x2="87.8" y2="212.2"/>
+          <line x1="80" y1="150" x2="62" y2="150"/><line x1="100.5" y1="100.5" x2="87.8" y2="87.8"/>
+          <line x1="150" y1="80" x2="150" y2="62"/><line x1="199.5" y1="100.5" x2="212.2" y2="87.8"/>
+        </g>
+        <g fill="#4338ca">
+          <circle cx="242" cy="150" r="5"/><circle cx="215" cy="215" r="5"/><circle cx="150" cy="242" r="5"/>
+          <circle cx="85" cy="215" r="5"/><circle cx="58" cy="150" r="5"/><circle cx="85" cy="85" r="5"/>
+          <circle cx="150" cy="58" r="5"/><circle cx="215" cy="85" r="5"/>
+        </g>
       </g>
-      <g fill="#4338ca">
-        <circle cx="242" cy="150" r="5"/><circle cx="215" cy="215" r="5"/><circle cx="150" cy="242" r="5"/>
-        <circle cx="85" cy="215" r="5"/><circle cx="58" cy="150" r="5"/><circle cx="85" cy="85" r="5"/>
-        <circle cx="150" cy="58" r="5"/><circle cx="215" cy="85" r="5"/>
-      </g>
-      <circle cx="150" cy="150" r="70" fill="#c7d2fe" stroke="#4338ca" stroke-width="3"/>
-      <path d="M 118 145 q 16 -22 32 0 q 16 22 32 0" fill="none" stroke="#dc2626" stroke-width="3"/>
-      <g font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      <circle class="bio-part" data-name="Eiweißhülle" data-info="Schützende Hülle aus Eiweiß, die das Virus umgibt." cx="150" cy="150" r="70" fill="#c7d2fe" stroke="#4338ca" stroke-width="3"/>
+      <path class="bio-part" data-name="Erbinformation" data-info="Im Inneren des Virus; der Bauplan für neue Viren." d="M 118 145 q 16 -22 32 0 q 16 22 32 0" fill="none" stroke="#dc2626" stroke-width="3"/>
+      <g pointer-events="none" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
         <circle cx="150" cy="42" r="13" fill="#1d4ed8"/><text x="150" y="47">1</text>
         <circle cx="108" cy="192" r="13" fill="#1d4ed8"/><text x="108" y="197">2</text>
         <circle cx="172" cy="150" r="13" fill="#1d4ed8"/><text x="172" y="155">3</text>
       </g>
-    </svg>`;
+    </svg>
+    <div class="figure-readout">Tipp: Tippe auf ein Teil des Virus.</div>
+    </div>`;
 
   // Bakterie: Zellwand, Zellmembran/Plasma, Erbinformation (Ring), Geißel (nummeriert)
   const bacteriaSvg = `
-    <svg viewBox="0 0 410 240" role="img" aria-label="Aufbau einer Bakterienzelle mit Zellwand, Zellplasma, Erbinformation und Geißel" style="max-width:410px;width:100%;height:auto;display:block;margin:1rem auto;font-family:sans-serif;">
-      <path d="M 320 120 q 16 -16 32 0 q 16 16 32 0 q 16 -16 24 -6" fill="none" stroke="#78350f" stroke-width="3"/>
-      <rect x="40" y="65" width="280" height="110" rx="55" fill="#fde68a" stroke="#b45309" stroke-width="5"/>
-      <rect x="52" y="77" width="256" height="86" rx="43" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
-      <ellipse cx="180" cy="120" rx="44" ry="26" fill="none" stroke="#dc2626" stroke-width="3"/>
-      <ellipse cx="180" cy="120" rx="22" ry="13" fill="none" stroke="#dc2626" stroke-width="2"/>
-      <g font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    <div class="clickable-figure">
+    <svg viewBox="0 0 410 240" role="img" aria-label="Aufbau einer Bakterienzelle mit Zellwand, Zellplasma, Erbinformation und Geißel" style="max-width:410px;width:100%;height:auto;display:block;margin:0 auto;font-family:sans-serif;">
+      <path class="bio-part" data-name="Geißel" data-info="Fadenförmiger Schwanz zur Fortbewegung (haben nicht alle Bakterien)." d="M 320 120 q 16 -16 32 0 q 16 16 32 0 q 16 -16 24 -6" fill="none" stroke="#78350f" stroke-width="3"/>
+      <rect class="bio-part" data-name="Zellwand" data-info="Feste Hülle; gibt dem Bakterium Halt und Form." x="40" y="65" width="280" height="110" rx="55" fill="#fde68a" stroke="#b45309" stroke-width="5"/>
+      <rect class="bio-part" data-name="Zellplasma (mit Zellmembran)" data-info="Grundmasse im Inneren; hier laufen die Lebensvorgänge ab." x="52" y="77" width="256" height="86" rx="43" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+      <g class="bio-part" data-name="Erbinformation" data-info="Frei im Zellplasma - ein Bakterium hat keinen echten Zellkern.">
+        <ellipse cx="180" cy="120" rx="44" ry="26" fill="none" stroke="#dc2626" stroke-width="3"/>
+        <ellipse cx="180" cy="120" rx="22" ry="13" fill="none" stroke="#dc2626" stroke-width="2"/>
+      </g>
+      <g pointer-events="none" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
         <circle cx="70" cy="72" r="13" fill="#1d4ed8"/><text x="70" y="77">1</text>
         <circle cx="105" cy="135" r="13" fill="#1d4ed8"/><text x="105" y="140">2</text>
         <circle cx="180" cy="120" r="13" fill="#1d4ed8"/><text x="180" y="125">3</text>
         <circle cx="360" cy="108" r="13" fill="#1d4ed8"/><text x="360" y="113">4</text>
       </g>
-    </svg>`;
+    </svg>
+    <div class="figure-readout">Tipp: Tippe auf ein Teil des Bakteriums.</div>
+    </div>`;
+
+  // Übertragungswege als anklickbare Panels (Lektion 7).
+  const transmissionSvg = `
+    <div class="clickable-figure">
+    <svg viewBox="0 0 540 200" role="img" aria-label="Übertragungswege von Krankheitserregern" style="max-width:540px;width:100%;height:auto;display:block;margin:0 auto;font-family:sans-serif;">
+      <g class="bio-part" data-name="Tröpfcheninfektion (Einatmen)" data-info="Beim Husten, Niesen oder Sprechen fliegen winzige Tröpfchen mit Erregern durch die Luft - z.B. Grippe und Masern.">
+        <rect x="10" y="10" width="160" height="160" rx="12" fill="#eff6ff" stroke="#2563EB" stroke-width="2"/>
+        <circle cx="58" cy="70" r="22" fill="#fde68a" stroke="#d99b1c" stroke-width="2"/>
+        <circle cx="98" cy="60" r="5" fill="#60a5fa"/>
+        <circle cx="115" cy="73" r="4" fill="#60a5fa"/>
+        <circle cx="106" cy="88" r="3" fill="#60a5fa"/>
+        <text x="90" y="128" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e3a8a">Tröpfchen</text>
+        <text x="90" y="148" text-anchor="middle" font-size="12" fill="#475569">(Einatmen)</text>
+      </g>
+      <g class="bio-part" data-name="Berührung (Schmierinfektion)" data-info="Über verunreinigte Hände, Türklinken oder Lebensmittel - zum Beispiel Salmonellen.">
+        <rect x="190" y="10" width="160" height="160" rx="12" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+        <rect x="245" y="52" width="50" height="42" rx="10" fill="#fcd34d" stroke="#b45309" stroke-width="2"/>
+        <line x1="253" y1="52" x2="253" y2="36" stroke="#b45309" stroke-width="3" stroke-linecap="round"/>
+        <line x1="264" y1="52" x2="264" y2="32" stroke="#b45309" stroke-width="3" stroke-linecap="round"/>
+        <line x1="275" y1="52" x2="275" y2="34" stroke="#b45309" stroke-width="3" stroke-linecap="round"/>
+        <line x1="286" y1="52" x2="286" y2="38" stroke="#b45309" stroke-width="3" stroke-linecap="round"/>
+        <text x="270" y="130" text-anchor="middle" font-size="14" font-weight="bold" fill="#a16207">Berührung</text>
+      </g>
+      <g class="bio-part" data-name="Blut" data-info="Über Wunden oder eine Blutübertragung gelangen Erreger ins Blut.">
+        <rect x="370" y="10" width="160" height="160" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+        <path d="M450 44 Q474 82 450 106 Q426 82 450 44 Z" fill="#ef4444" stroke="#b91c1c" stroke-width="2"/>
+        <text x="450" y="142" text-anchor="middle" font-size="14" font-weight="bold" fill="#991b1b">Blut</text>
+      </g>
+    </svg>
+    <div class="figure-readout">Tipp: Tippe auf einen Übertragungsweg, um mehr zu erfahren.</div>
+    </div>`;
 
   window.LESSON_DATA = (window.LESSON_DATA || []).concat([
 
@@ -244,6 +285,7 @@
           </table>
 
           <h3>Wie werden Erreger übertragen?</h3>
+          ${transmissionSvg}
           <table class="icon-table">
             <tr><th>Übertragungsweg</th><th>Beispiel</th></tr>
             <tr><td>Tröpfcheninfektion (Einatmen)</td><td>Husten, Niesen, Sprechen - z.B. Grippe, Masern.</td></tr>
