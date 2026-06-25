@@ -1,5 +1,5 @@
 /**
- * Abschluss - Pruefungssimulation (Biologie KA 2, Klasse 8, M-Niveau).
+ * Abschluss - Prüfungssimulation (Biologie KA 2, Klasse 8, M-Niveau).
  *   L8 Gemischte Aufgaben aus allen 4 Themen der Klassenarbeit.
  *
  * Mischt Aufgaben aus: Sinnesorgan Haut, Vom Reiz zur Reaktion, Die Zelle,
@@ -11,20 +11,20 @@
 
     {
       id: 8,
-      title: "Pruefungssimulation (alle Themen)",
+      title: "Prüfungssimulation (alle Themen)",
       explanation: {
         html: `
           <h2>Jetzt zeigst du, was du kannst!</h2>
-          <p>Hier sind gemischte Aufgaben aus <strong>allen vier Themen</strong> der Klassenarbeit. So aehnlich
-          koennte deine echte Arbeit aussehen.</p>
+          <p>Hier sind gemischte Aufgaben aus <strong>allen vier Themen</strong> der Klassenarbeit. So ähnlich
+          könnte deine echte Arbeit aussehen.</p>
 
           <div class="analogy-box">
             <strong>Wie ein Probelauf vor dem Wettkampf:</strong> Bevor es ernst wird, testest du einmal alles
-            zusammen. Wo es noch hakt, gehst du nochmal in die passende Lektion zurueck - dann sitzt es zur Arbeit.
+            zusammen. Wo es noch hakt, gehst du nochmal in die passende Lektion zurück - dann sitzt es zur Arbeit.
           </div>
 
           <div class="info-card">
-            <strong>Die vier Themen im Ueberblick:</strong>
+            <strong>Die vier Themen im Überblick:</strong>
             <ul>
               <li><strong>Sinnesorgan Haut</strong> - die drei Schichten und ihre Funktionen</li>
               <li><strong>Vom Reiz zur Reaktion</strong> - die Kette und das EVA-Prinzip</li>
@@ -34,7 +34,7 @@
           </div>
 
           <div class="tip-box">
-            <strong>Tipp:</strong> Mach die Uebungen ehrlich aus dem Kopf. Wenn du bei einer Aufgabe haengst,
+            <strong>Tipp:</strong> Mach die Übungen ehrlich aus dem Kopf. Wenn du bei einer Aufgabe hängst,
             ist das ein Zeichen, das Thema nochmal kurz zu wiederholen.
           </div>
         `
@@ -46,21 +46,21 @@
           question: "Haut: Ordne jeden Bestandteil seiner Schicht zu.",
           pairs: [
             { left: "Hornschicht", right: "Oberhaut" },
-            { left: "Schweissdruese", right: "Lederhaut" },
+            { left: "Schweißdrüse", right: "Lederhaut" },
             { left: "Fettgewebe", right: "Unterhaut" }
           ],
-          explanation: "Oberhaut (Horn-/Keimschicht), Lederhaut (Druesen, Gefaesse, Sinneszellen), Unterhaut (Fettgewebe)."
+          explanation: "Oberhaut (Horn-/Keimschicht), Lederhaut (Drüsen, Gefäße, Sinneszellen), Unterhaut (Fettgewebe)."
         },
         {
           type: "multiple-choice",
-          question: "Haut: Welche Schicht bildet staendig neue Hautzellen?",
-          options: ["Die Keimschicht", "Die Hornschicht", "Die Unterhaut", "Die Schweissdruese"],
+          question: "Haut: Welche Schicht bildet ständig neue Hautzellen?",
+          options: ["Die Keimschicht", "Die Hornschicht", "Die Unterhaut", "Die Schweißdrüse"],
           correct: 0,
           explanation: "Die Keimschicht bildet neue Zellen, die nach oben wandern und verhornen.",
           wrongExplanations: {
             1: "Die Hornschicht besteht aus toten Zellen.",
             2: "Die Unterhaut ist Fettgewebe.",
-            3: "Die Schweissdruese bildet Schweiss, keine Hautzellen."
+            3: "Die Schweißdrüse bildet Schweiß, keine Hautzellen."
           }
         },
         {
@@ -79,7 +79,7 @@
         },
         {
           type: "multiple-choice",
-          question: "Reiz und Reaktion: Wofuer steht EVA?",
+          question: "Reiz und Reaktion: Wofür steht EVA?",
           options: [
             "Eingabe - Verarbeitung - Ausgabe",
             "Erkennen - Verstehen - Antworten",
@@ -90,40 +90,40 @@
           explanation: "EVA = Eingabe (Sinnesorgan), Verarbeitung (Gehirn), Ausgabe (Reaktion/Muskel).",
           wrongExplanations: {
             1: "Nicht ganz - die richtigen Begriffe sind Eingabe, Verarbeitung, Ausgabe.",
-            2: "Das gehoert zur Verdauung, nicht zum EVA-Prinzip.",
-            3: "Nein, EVA steht fuer Eingabe, Verarbeitung, Ausgabe."
+            2: "Das gehört zur Verdauung, nicht zum EVA-Prinzip.",
+            3: "Nein, EVA steht für Eingabe, Verarbeitung, Ausgabe."
           }
         },
         {
           type: "multiple-choice",
           question: "Zelle: Welche drei Teile hat nur die Pflanzenzelle?",
           options: [
-            "Zellwand, Chloroplasten, grosse Vakuole",
+            "Zellwand, Chloroplasten, große Vakuole",
             "Zellkern, Zellmembran, Mitochondrien",
             "Zellplasma, Zellkern, Ribosomen",
             "Mitochondrien, Zellmembran, Vakuole"
           ],
           correct: 0,
-          explanation: "W-C-V: Zellwand, Chloroplasten und die grosse Vakuole sind pflanzentypisch.",
+          explanation: "W-C-V: Zellwand, Chloroplasten und die große Vakuole sind pflanzentypisch.",
           wrongExplanations: {
             1: "Diese haben beide Zellen.",
             2: "Auch diese kommen in beiden vor.",
-            3: "Zellmembran und Mitochondrien haben beide; nur die grosse Vakuole ist pflanzentypisch."
+            3: "Zellmembran und Mitochondrien haben beide; nur die große Vakuole ist pflanzentypisch."
           }
         },
         {
           type: "matching",
           question: "Zelle: Ordne jedem Bestandteil seine Aufgabe zu.",
           pairs: [
-            { left: "Zellkern", right: "steuert die Zelle, enthaelt die Erbinformation" },
+            { left: "Zellkern", right: "steuert die Zelle, enthält die Erbinformation" },
             { left: "Mitochondrien", right: "liefern Energie (Kraftwerk)" },
             { left: "Zellmembran", right: "regelt, was rein- und rausgeht" }
           ],
-          explanation: "Zellkern = Steuerung, Mitochondrien = Energie, Zellmembran = Huelle/Tor."
+          explanation: "Zellkern = Steuerung, Mitochondrien = Energie, Zellmembran = Hülle/Tor."
         },
         {
           type: "multiple-choice",
-          question: "Infektion: Was stimmt ueber Bakterien und Viren?",
+          question: "Infektion: Was stimmt über Bakterien und Viren?",
           options: [
             "Bakterien vermehren sich selbst; Viren brauchen eine Wirtszelle.",
             "Viren sind Lebewesen, Bakterien nicht.",
@@ -135,24 +135,25 @@
           wrongExplanations: {
             1: "Umgekehrt: Bakterien sind Lebewesen, Viren nicht.",
             2: "Antibiotika wirken nur gegen Bakterien, nicht gegen Viren.",
-            3: "Nein - das gilt fuer Viren. Bakterien teilen sich selbst."
+            3: "Nein - das gilt für Viren. Bakterien teilen sich selbst."
           }
         },
         {
-          type: "matching",
-          question: "Infektion: Ordne jede Krankheit ihrem Erreger zu.",
-          pairs: [
-            { left: "Grippe", right: "Virus" },
-            { left: "Salmonellose", right: "Bakterium" },
-            { left: "Masern", right: "Virus" },
-            { left: "Tuberkulose", right: "Bakterium" }
-          ],
-          explanation: "Grippe und Masern = Viren; Salmonellose und Tuberkulose = Bakterien."
+          type: "multiple-choice",
+          question: "Infektion: Welche dieser Krankheiten wird von einem <strong>Virus</strong> ausgelöst?",
+          options: ["Grippe", "Salmonellose", "Tuberkulose", "Wundstarrkrampf"],
+          correct: 0,
+          explanation: "Grippe (und auch Masern) werden von Viren ausgelöst.",
+          wrongExplanations: {
+            1: "Salmonellose wird von Bakterien (Salmonellen) ausgelöst.",
+            2: "Tuberkulose wird von Bakterien ausgelöst.",
+            3: "Wundstarrkrampf wird von Bakterien ausgelöst."
+          }
         },
         {
           type: "fill-in-blank",
-          question: "Gemischt: Fuelle die Luecken aus allen Themen.",
-          text: "Die Haut hat drei Schichten: Oberhaut, Lederhaut und {{blank}}. Das EVA-Prinzip steht fuer Eingabe, Verarbeitung und {{blank}}. Der {{blank}} steuert die Zelle. Die Inkubationszeit ist die Zeit von der Ansteckung bis zu den ersten {{blank}}.",
+          question: "Gemischt: Fülle die Lücken aus allen Themen.",
+          text: "Die Haut hat drei Schichten: Oberhaut, Lederhaut und {{blank}}. Das EVA-Prinzip steht für Eingabe, Verarbeitung und {{blank}}. Der {{blank}} steuert die Zelle. Die Inkubationszeit ist die Zeit von der Ansteckung bis zu den ersten {{blank}}.",
           blanks: [
             { correct: "Unterhaut", alternatives: ["unterhaut"] },
             { correct: "Ausgabe", alternatives: ["ausgabe"] },
@@ -163,10 +164,10 @@
         },
         {
           type: "free-text",
-          question: "Erklaere mit eigenen Worten den <strong>Unterschied zwischen Bakterien und Viren</strong>.",
+          question: "Erkläre mit eigenen Worten den <strong>Unterschied zwischen Bakterien und Viren</strong>.",
           hint: "Denk an: Lebewesen? Wie vermehren sie sich? Helfen Antibiotika?",
           minWords: 15,
-          modelAnswer: "Bakterien sind Lebewesen und bestehen aus einer eigenen Zelle. Sie koennen sich selbst durch Zellteilung vermehren. Viren sind dagegen keine Lebewesen und keine Zelle. Sie koennen sich nicht selbst vermehren, sondern brauchen dafuer eine fremde Wirtszelle, die sie umprogrammieren. Antibiotika helfen nur gegen Bakterien, nicht gegen Viren."
+          modelAnswer: "Bakterien sind Lebewesen und bestehen aus einer eigenen Zelle. Sie können sich selbst durch Zellteilung vermehren. Viren sind dagegen keine Lebewesen und keine Zelle. Sie können sich nicht selbst vermehren, sondern brauchen dafür eine fremde Wirtszelle, die sie umprogrammieren. Antibiotika helfen nur gegen Bakterien, nicht gegen Viren."
         }
       ]
     }

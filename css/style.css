@@ -2043,6 +2043,17 @@ p {
   margin: 1rem 0;
 }
 
+/* reading-guide (grau) -- "So liest du das Visual/die Tabelle" */
+.reading-guide {
+  background: #F3F4F6;
+  border-left: 4px solid #6B7280;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+.reading-guide ul { margin: 0.4rem 0 0; padding-left: 1.25rem; }
+.reading-guide li { margin-bottom: 0.25rem; }
+
 /* Intro-Text ueber den Uebungen */
 .exercises-intro {
   background: var(--accent-light);

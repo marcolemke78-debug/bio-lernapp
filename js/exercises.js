@@ -1,6 +1,5 @@
 /**
- * Übungs-Engine für das Geschichts-Lernprogramm
- * (Absolutismus & Französische Revolution).
+ * Übungs-Engine für das Biologie-Lernprogramm (KA 2, Klasse 8).
  *
  * Genutzte Übungstypen:
  *   - multiple-choice  (mit elaboriertem Feedback je falscher Option)

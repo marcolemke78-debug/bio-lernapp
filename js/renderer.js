@@ -1,5 +1,5 @@
 /**
- * Renderer fuer das Geschichts-Lernprogramm (Absolutismus & Franz. Revolution).
+ * Renderer fuer das Biologie-Lernprogramm (KA 2, Klasse 8).
  * Baut die Sidebar, den Fortschrittsbalken, die "heute faellig"-Box,
  * den Selbst-Check (Spaced Repetition) und das 3-Phasen-Lektionslayout
  * (Erklaerung, Beispiel, Uebung).

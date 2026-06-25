@@ -7,7 +7,7 @@
  */
 (function () {
 
-  // EVA-Chevron: Eingabe (gruen) -> Verarbeitung (orange) -> Ausgabe (rot)
+  // EVA-Chevron: Eingabe (grün) -> Verarbeitung (orange) -> Ausgabe (rot)
   const evaSvg = `
     <svg viewBox="0 0 530 140" role="img" aria-label="EVA-Prinzip: Eingabe, Verarbeitung, Ausgabe" style="max-width:530px;width:100%;height:auto;display:block;margin:1rem auto;font-family:sans-serif;">
       <polygon points="15,25 135,25 165,65 135,105 15,105 45,65" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
@@ -23,7 +23,7 @@
 
   // Reiz-Reaktions-Kette (senkrecht): farbiger Streifen = EVA-Zuordnung
   const chainSvg = `
-    <svg viewBox="0 0 470 470" role="img" aria-label="Reiz-Reaktions-Kette vom Reiz ueber Sinnesorgan, Nerven und Gehirn bis zur Reaktion" style="max-width:470px;width:100%;height:auto;display:block;margin:1rem auto;font-family:sans-serif;">
+    <svg viewBox="0 0 470 470" role="img" aria-label="Reiz-Reaktions-Kette vom Reiz über Sinnesorgan, Nerven und Gehirn bis zur Reaktion" style="max-width:470px;width:100%;height:auto;display:block;margin:1rem auto;font-family:sans-serif;">
       <defs>
         <marker id="arr" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
           <path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/>
@@ -32,7 +32,7 @@
       <!-- Box 1: Reiz -->
       <rect x="70" y="8" width="330" height="44" rx="8" fill="#f3f4f6" stroke="#9ca3af"/>
       <rect x="70" y="8" width="8" height="44" rx="4" fill="#9ca3af"/>
-      <text x="240" y="30" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2937">Reiz (z.B. heisse Herdplatte)</text>
+      <text x="240" y="30" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2937">Reiz (z.B. heiße Herdplatte)</text>
       <text x="240" y="46" text-anchor="middle" font-size="10" fill="#6b7280">Einfluss aus der Umwelt</text>
       <line x1="240" y1="52" x2="240" y2="74" stroke="#6b7280" stroke-width="2" marker-end="url(#arr)"/>
       <!-- Box 2: Sinnesorgan -->
@@ -62,7 +62,7 @@
       <!-- Box 6: Muskel / Reaktion -->
       <rect x="70" y="348" width="330" height="44" rx="8" fill="#fee2e2" stroke="#dc2626"/>
       <rect x="70" y="348" width="8" height="44" rx="4" fill="#dc2626"/>
-      <text x="240" y="370" text-anchor="middle" font-size="13" font-weight="bold" fill="#b91c1c">Muskel / Druese = Reaktion</text>
+      <text x="240" y="370" text-anchor="middle" font-size="13" font-weight="bold" fill="#b91c1c">Muskel / Drüse = Reaktion</text>
       <text x="240" y="386" text-anchor="middle" font-size="10" fill="#1f2937">z.B. Hand schnell wegziehen</text>
       <!-- EVA-Klammern rechts -->
       <text x="430" y="120" text-anchor="middle" font-size="11" font-weight="bold" fill="#15803d" transform="rotate(-90 430 120)">Eingabe</text>
@@ -80,26 +80,26 @@
       title: "Vom Reiz zur Reaktion & das EVA-Prinzip",
       explanation: {
         html: `
-          <h2>Wie der Koerper auf die Umwelt reagiert</h2>
-          <p>Stell dir vor, du fasst aus Versehen auf eine heisse Herdplatte. Blitzschnell ziehst du die
+          <h2>Wie der Körper auf die Umwelt reagiert</h2>
+          <p>Stell dir vor, du fasst aus Versehen auf eine heiße Herdplatte. Blitzschnell ziehst du die
           Hand weg - <em>ohne nachzudenken</em>. Dahinter steckt ein fester Ablauf: vom <strong>Reiz</strong>
           bis zur <strong>Reaktion</strong>.</p>
 
           <div class="analogy-box">
-            <strong>Wie eine Tuerklingel:</strong> Jemand drueckt auf den Knopf (<strong>Reiz</strong>). Das Signal
-            laeuft durch das Kabel (<strong>Nerv</strong>) zur Klingel im Haus (<strong>Gehirn / Verarbeitung</strong>),
-            und die Klingel laeutet (<strong>Reaktion</strong>). Bei deinem Koerper laeuft genau so eine
-            Signal-Kette ab - nur viel schneller und ueber Nerven.
+            <strong>Wie eine Türklingel:</strong> Jemand drückt auf den Knopf (<strong>Reiz</strong>). Das Signal
+            läuft durch das Kabel (<strong>Nerv</strong>) zur Klingel im Haus (<strong>Gehirn / Verarbeitung</strong>),
+            und die Klingel läutet (<strong>Reaktion</strong>). Bei deinem Körper läuft genau so eine
+            Signal-Kette ab - nur viel schneller und über Nerven.
           </div>
 
           <h3>Was ist ein Reiz?</h3>
-          <p>Ein <strong>Reiz</strong> ist ein <strong>Einfluss aus der Umwelt</strong> auf den Koerper -
-          zum Beispiel Licht, ein Geraeusch, ein Geruch, Hitze oder eine Beruehrung. Aufgenommen werden Reize
-          von den <strong>Sinnesorganen</strong>: <strong>Auge</strong> (Sehen), <strong>Ohr</strong> (Hoeren),
-          <strong>Nase</strong> (Riechen), <strong>Zunge</strong> (Schmecken) und <strong>Haut</strong> (Fuehlen).</p>
+          <p>Ein <strong>Reiz</strong> ist ein <strong>Einfluss aus der Umwelt</strong> auf den Körper -
+          zum Beispiel Licht, ein Geräusch, ein Geruch, Hitze oder eine Berührung. Aufgenommen werden Reize
+          von den <strong>Sinnesorganen</strong>: <strong>Auge</strong> (Sehen), <strong>Ohr</strong> (Hören),
+          <strong>Nase</strong> (Riechen), <strong>Zunge</strong> (Schmecken) und <strong>Haut</strong> (Fühlen).</p>
 
           <h3>Die Reiz-Reaktions-Kette</h3>
-          <p>Vom Reiz bis zur Reaktion durchlaeuft die Information immer dieselben Stationen:</p>
+          <p>Vom Reiz bis zur Reaktion durchläuft die Information immer dieselben Stationen:</p>
 
           ${chainSvg}
 
@@ -110,7 +110,7 @@
               <li>Der <strong>sensorische Nerv</strong> leitet die Information zum Gehirn (sensorisch = "von den Sinnen hin").</li>
               <li>Das <strong>Gehirn</strong> verarbeitet und entscheidet, was zu tun ist.</li>
               <li>Der <strong>motorische Nerv</strong> leitet den Befehl zum Muskel (motorisch = "zur Bewegung hin").</li>
-              <li>Der <strong>Muskel</strong> (oder eine Druese) fuehrt den Befehl aus = die <strong>Reaktion</strong>.</li>
+              <li>Der <strong>Muskel</strong> (oder eine Drüse) führt den Befehl aus = die <strong>Reaktion</strong>.</li>
             </ul>
           </div>
 
@@ -125,25 +125,25 @@
             <tr><th>EVA-Schritt</th><th>Was passiert?</th><th>In der Kette</th></tr>
             <tr><td><strong>E</strong>ingabe</td><td>Der Reiz wird aufgenommen</td><td>Sinnesorgan + sensorischer Nerv</td></tr>
             <tr><td><strong>V</strong>erarbeitung</td><td>Die Information wird verarbeitet, es wird entschieden</td><td>Gehirn</td></tr>
-            <tr><td><strong>A</strong>usgabe</td><td>Der Koerper reagiert</td><td>motorischer Nerv + Muskel/Druese</td></tr>
+            <tr><td><strong>A</strong>usgabe</td><td>Der Körper reagiert</td><td>motorischer Nerv + Muskel/Drüse</td></tr>
           </table>
 
           <div class="why-context">
             <strong>Warum lernen wir das?</strong> Auf der KA steht "Reiz-Reaktions-Prinzip" und "EVA-System".
             Eine typische Aufgabe: die Kette in der richtigen Reihenfolge nennen oder zu einem Beispiel sagen,
-            welcher EVA-Schritt gerade ablaeuft.
+            welcher EVA-Schritt gerade abläuft.
           </div>
 
           <div class="tip-box">
             <strong>EVA merken:</strong> Denk an einen Computer - du tippst etwas ein (<strong>E</strong>ingabe,
             Tastatur), der Computer rechnet (<strong>V</strong>erarbeitung), und am Bildschirm erscheint das
-            Ergebnis (<strong>A</strong>usgabe). Dein Koerper macht es genauso: Sinnesorgan - Gehirn - Muskel.
+            Ergebnis (<strong>A</strong>usgabe). Dein Körper macht es genauso: Sinnesorgan - Gehirn - Muskel.
           </div>
 
           <div class="warning-box">
             <strong>Nicht verwechseln:</strong> Der <strong>sensorische</strong> Nerv leitet <em>zum Gehirn hin</em>
             (Eingabe), der <strong>motorische</strong> Nerv leitet <em>vom Gehirn weg</em> zum Muskel (Ausgabe).
-            Eselsbruecke: <strong>m</strong>otorisch = <strong>M</strong>uskel/Bewegung.
+            Eselsbrücke: <strong>m</strong>otorisch = <strong>M</strong>uskel/Bewegung.
           </div>
         `
       },
@@ -152,8 +152,8 @@
         steps: [
           {
             label: "Reiz (Eingabe)",
-            html: `<p>Beim Voelkerball fliegt ein Ball auf dich zu. Das <strong>Auge</strong> (Sinnesorgan)
-              nimmt den Reiz "sich naehernder Ball" auf. Der <strong>sensorische Nerv</strong> meldet das ans Gehirn.</p>`
+            html: `<p>Beim Völkerball fliegt ein Ball auf dich zu. Das <strong>Auge</strong> (Sinnesorgan)
+              nimmt den Reiz "sich nähernder Ball" auf. Der <strong>sensorische Nerv</strong> meldet das ans Gehirn.</p>`
           },
           {
             label: "Verarbeitung",
@@ -163,7 +163,7 @@
           {
             label: "Ausgabe (Reaktion)",
             html: `<p>Der <strong>motorische Nerv</strong> leitet den Befehl zu den <strong>Muskeln</strong>.
-              Du springst zur Seite oder hebst die Haende = die <strong>Reaktion</strong>.</p>`
+              Du springst zur Seite oder hebst die Hände = die <strong>Reaktion</strong>.</p>`
           }
         ]
       },
@@ -173,7 +173,7 @@
           type: "ordering",
           question: "Bringe die Reiz-Reaktions-Kette in die richtige Reihenfolge:",
           items: [
-            "Reiz (z.B. heisse Herdplatte)",
+            "Reiz (z.B. heiße Herdplatte)",
             "Sinnesorgan nimmt den Reiz auf",
             "sensorischer Nerv leitet zum Gehirn",
             "Gehirn verarbeitet",
@@ -185,7 +185,7 @@
         },
         {
           type: "multiple-choice",
-          question: "Wofuer stehen die Buchstaben im <strong>EVA-Prinzip</strong>?",
+          question: "Wofür stehen die Buchstaben im <strong>EVA-Prinzip</strong>?",
           options: [
             "Eingabe - Verarbeitung - Ausgabe",
             "Einatmen - Verdauen - Ausscheiden",
@@ -196,8 +196,8 @@
           explanation: "Richtig! EVA = Eingabe (Reiz/Sinnesorgan), Verarbeitung (Gehirn), Ausgabe (Reaktion/Muskel).",
           wrongExplanations: {
             1: "Das hat mit der Verdauung zu tun, nicht mit dem Reiz-Reaktions-Prinzip.",
-            2: "Klingt aehnlich, aber die richtigen Begriffe sind Eingabe, Verarbeitung, Ausgabe.",
-            3: "Nein - EVA steht fuer Eingabe, Verarbeitung, Ausgabe."
+            2: "Klingt ähnlich, aber die richtigen Begriffe sind Eingabe, Verarbeitung, Ausgabe.",
+            3: "Nein - EVA steht für Eingabe, Verarbeitung, Ausgabe."
           }
         },
         {
@@ -206,14 +206,14 @@
           pairs: [
             { left: "Eingabe", right: "Sinnesorgan nimmt den Reiz auf" },
             { left: "Verarbeitung", right: "Gehirn entscheidet" },
-            { left: "Ausgabe", right: "Muskel fuehrt die Reaktion aus" }
+            { left: "Ausgabe", right: "Muskel führt die Reaktion aus" }
           ],
           explanation: "Eingabe = Sinnesorgan, Verarbeitung = Gehirn, Ausgabe = Muskel/Reaktion."
         },
         {
           type: "fill-in-blank",
-          question: "Fuelle die Luecken zur Reiz-Reaktions-Kette:",
-          text: "Ein {{blank}} ist ein Einfluss aus der Umwelt. Er wird vom {{blank}} aufgenommen. Das {{blank}} verarbeitet die Information, und der Muskel fuehrt die {{blank}} aus.",
+          question: "Fülle die Lücken zur Reiz-Reaktions-Kette:",
+          text: "Ein {{blank}} ist ein Einfluss aus der Umwelt. Er wird vom {{blank}} aufgenommen. Das {{blank}} verarbeitet die Information, und der Muskel führt die {{blank}} aus.",
           blanks: [
             { correct: "Reiz", alternatives: ["reiz"] },
             { correct: "Sinnesorgan", alternatives: ["sinnesorgan", "Sinnesorganen"] },

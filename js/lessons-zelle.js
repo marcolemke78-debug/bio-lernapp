@@ -8,7 +8,7 @@
  */
 (function () {
 
-  // Einzelne Zelle mit nummerierten Grundbausteinen (Erklaerung + Uebung).
+  // Einzelne Zelle mit nummerierten Grundbausteinen (Erklärung + Übung).
   const cellSvg = `
     <svg viewBox="0 0 460 320" role="img" aria-label="Schematische Zelle mit Zellmembran, Zellplasma, Zellkern und Mitochondrien" style="max-width:460px;width:100%;height:auto;display:block;margin:1rem auto;font-family:sans-serif;">
       <ellipse cx="230" cy="160" rx="205" ry="145" fill="#fdeaf3" stroke="#db2777" stroke-width="4"/>
@@ -34,7 +34,7 @@
       </g>
     </svg>`;
 
-  // Tierzelle vs. Pflanzenzelle - die 3 pflanzentypischen Teile gruen hervorgehoben.
+  // Tierzelle vs. Pflanzenzelle - die 3 pflanzentypischen Teile grün hervorgehoben.
   const compareSvg = `
     <svg viewBox="0 0 640 340" role="img" aria-label="Vergleich Tierzelle und Pflanzenzelle" style="max-width:640px;width:100%;height:auto;display:block;margin:1rem auto;font-family:sans-serif;">
       <!-- Tierzelle -->
@@ -44,22 +44,22 @@
       <ellipse cx="100" cy="235" rx="24" ry="13" fill="#fca5a5" stroke="#dc2626" stroke-width="1.5"/>
       <ellipse cx="215" cy="210" rx="24" ry="13" fill="#fca5a5" stroke="#dc2626" stroke-width="1.5"/>
       <text x="160" y="320" text-anchor="middle" font-size="16" font-weight="bold" fill="#be185d">Tierzelle</text>
-      <!-- Pflanzenzelle: dicke Zellwand aussen -->
+      <!-- Pflanzenzelle: dicke Zellwand außen -->
       <rect x="360" y="45" width="240" height="235" rx="14" fill="#dcfce7" stroke="#15803d" stroke-width="6"/>
       <rect x="372" y="57" width="216" height="211" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
-      <!-- grosse Vakuole -->
+      <!-- große Vakuole -->
       <ellipse cx="495" cy="175" rx="78" ry="72" fill="#cfeefe" stroke="#3b82f6" stroke-width="2"/>
       <!-- Zellkern -->
       <circle cx="420" cy="100" r="30" fill="#c4b5fd" stroke="#7c3aed" stroke-width="2"/>
       <circle cx="420" cy="100" r="9" fill="#7c3aed"/>
-      <!-- Chloroplasten (gruen) -->
+      <!-- Chloroplasten (grün) -->
       <ellipse cx="560" cy="95" rx="17" ry="9" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
       <ellipse cx="565" cy="240" rx="17" ry="9" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
       <ellipse cx="405" cy="235" rx="17" ry="9" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
       <!-- Mitochondrium -->
       <ellipse cx="415" cy="170" rx="22" ry="12" fill="#fca5a5" stroke="#dc2626" stroke-width="1.5"/>
       <text x="480" y="320" text-anchor="middle" font-size="16" font-weight="bold" fill="#15803d">Pflanzenzelle</text>
-      <!-- Hinweis-Labels fuer die 3 Extra-Teile -->
+      <!-- Hinweis-Labels für die 3 Extra-Teile -->
       <text x="495" y="180" text-anchor="middle" font-size="12" font-weight="bold" fill="#1d4ed8">Vakuole</text>
       <text x="600" y="40" text-anchor="end" font-size="11" font-weight="bold" fill="#15803d">Zellwand</text>
       <text x="560" y="78" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803d">Chloroplast</text>
@@ -82,8 +82,8 @@
 
           <div class="analogy-box">
             <strong>Eine Zelle ist wie eine kleine Fabrik:</strong> In einer Fabrik gibt es einen Chef, ein Tor,
-            eine Werkshalle und ein Kraftwerk. Genau so hat auch die Zelle ihre "Abteilungen" - jede sorgt dafuer,
-            dass die Zelle laeuft. Mit diesem Bild kannst du dir die Bestandteile gut merken.
+            eine Werkshalle und ein Kraftwerk. Genau so hat auch die Zelle ihre "Abteilungen" - jede sorgt dafür,
+            dass die Zelle läuft. Mit diesem Bild kannst du dir die Bestandteile gut merken.
           </div>
 
           <h3>Die Bauteile einer Zelle</h3>
@@ -91,13 +91,13 @@
 
           <table class="icon-table">
             <tr><th>Nr.</th><th>Bestandteil</th><th>Aufgabe (Funktion)</th><th>In der Fabrik ...</th></tr>
-            <tr><td><strong>1</strong></td><td>Zellmembran</td><td>Aeussere Huelle; schuetzt die Zelle und regelt, was hinein- und herausgeht.</td><td>das Werkstor / die Pforte</td></tr>
-            <tr><td><strong>2</strong></td><td>Zellplasma</td><td>Die zaehfluessige Grundmasse, die die Zelle ausfuellt; darin liegen alle Bauteile.</td><td>die Werkshalle / der Boden</td></tr>
-            <tr><td><strong>3</strong></td><td>Zellkern</td><td>Steuerzentrale; enthaelt die Erbinformation (die Bauplaene) und steuert die ganze Zelle.</td><td>der Chef / die Leitung</td></tr>
-            <tr><td><strong>4</strong></td><td>Mitochondrien</td><td>Liefern die Energie fuer die Zelle - die "Kraftwerke" der Zelle.</td><td>das Kraftwerk</td></tr>
+            <tr><td><strong>1</strong></td><td>Zellmembran</td><td>Äußere Hülle; schützt die Zelle und regelt, was hinein- und herausgeht.</td><td>das Werkstor / die Pforte</td></tr>
+            <tr><td><strong>2</strong></td><td>Zellplasma</td><td>Die zähflüssige Grundmasse, die die Zelle ausfüllt; darin liegen alle Bauteile.</td><td>die Werkshalle / der Boden</td></tr>
+            <tr><td><strong>3</strong></td><td>Zellkern</td><td>Steuerzentrale; enthält die Erbinformation (die Baupläne) und steuert die ganze Zelle.</td><td>der Chef / die Leitung</td></tr>
+            <tr><td><strong>4</strong></td><td>Mitochondrien</td><td>Liefern die Energie für die Zelle - die "Kraftwerke" der Zelle.</td><td>das Kraftwerk</td></tr>
           </table>
-          <p>Die kleinen grauen Punkte sind <strong>Ribosomen</strong> - an ihnen werden Eiweisse gebaut
-          (die "Werkbaenke" der Fabrik). Sie musst du nur kennen, nicht im Detail erklaeren.</p>
+          <p>Die kleinen grauen Punkte sind <strong>Ribosomen</strong> - an ihnen werden Eiweiße gebaut
+          (die "Werkbänke" der Fabrik). Sie musst du nur kennen, nicht im Detail erklären.</p>
 
           <div class="why-context">
             <strong>Warum lernen wir das?</strong> Auf der KA stehen die "Zellbestandteile". Eine typische Aufgabe:
@@ -111,9 +111,9 @@
           </div>
 
           <div class="warning-box">
-            <strong>Nicht verwechseln:</strong> Die <strong>Zellmembran</strong> ist die duenne, weiche Huelle,
+            <strong>Nicht verwechseln:</strong> Die <strong>Zellmembran</strong> ist die dünne, weiche Hülle,
             die <em>jede</em> Zelle hat. Die feste <strong>Zellwand</strong> ist etwas anderes - die haben
-            <em>nur Pflanzenzellen</em> (zusaetzlich, ganz aussen). Mehr dazu in der naechsten Lektion.
+            <em>nur Pflanzenzellen</em> (zusätzlich, ganz außen). Mehr dazu in der nächsten Lektion.
           </div>
         `
       },
@@ -122,22 +122,22 @@
         steps: [
           {
             label: "Die Zelle braucht Energie",
-            html: `<p>Damit die Zelle arbeiten kann, braucht sie Energie. Dafuer sorgen die
+            html: `<p>Damit die Zelle arbeiten kann, braucht sie Energie. Dafür sorgen die
               <strong>Mitochondrien</strong> (das "Kraftwerk").</p>`
           },
           {
             label: "Etwas soll in die Zelle hinein",
-            html: `<p>Naehrstoffe muessen in die Zelle. Was hinein- und herausgeht, regelt die
+            html: `<p>Nährstoffe müssen in die Zelle. Was hinein- und herausgeht, regelt die
               <strong>Zellmembran</strong> (das "Tor").</p>`
           },
           {
             label: "Wer hat das Sagen?",
-            html: `<p>Gesteuert wird alles vom <strong>Zellkern</strong> - er enthaelt die Bauplaene
+            html: `<p>Gesteuert wird alles vom <strong>Zellkern</strong> - er enthält die Baupläne
               (Erbinformation) und ist der "Chef".</p>`
           }
         ]
       },
-      exercisesIntro: "Denk an die Fabrik: Chef (Zellkern), Tor (Zellmembran), Halle (Zellplasma), Kraftwerk (Mitochondrium).",
+      exercisesIntro: cellSvg + "<p>Denk an die Fabrik: Chef (Zellkern), Tor (Zellmembran), Halle (Zellplasma), Kraftwerk (Mitochondrium). Die Nummern siehst du oben.</p>",
       exercises: [
         {
           type: "matching",
@@ -148,41 +148,41 @@
             { left: "3", right: "Zellkern" },
             { left: "4", right: "Mitochondrium" }
           ],
-          explanation: "1 Zellmembran (Huelle), 2 Zellplasma (Grundmasse), 3 Zellkern (Steuerung), 4 Mitochondrium (Energie)."
+          explanation: "1 Zellmembran (Hülle), 2 Zellplasma (Grundmasse), 3 Zellkern (Steuerung), 4 Mitochondrium (Energie)."
         },
         {
           type: "matching",
           question: "Ordne jedem Bestandteil seine Aufgabe zu:",
           pairs: [
-            { left: "Zellkern", right: "steuert die Zelle, enthaelt die Erbinformation" },
+            { left: "Zellkern", right: "steuert die Zelle, enthält die Erbinformation" },
             { left: "Zellmembran", right: "regelt, was rein- und rausgeht" },
             { left: "Mitochondrien", right: "liefern die Energie (Kraftwerk)" },
-            { left: "Zellplasma", right: "fuellt die Zelle aus, darin liegen die Bauteile" }
+            { left: "Zellplasma", right: "füllt die Zelle aus, darin liegen die Bauteile" }
           ],
           explanation: "Zellkern = Steuerung, Zellmembran = Tor, Mitochondrien = Energie, Zellplasma = Grundmasse."
         },
         {
           type: "multiple-choice",
-          question: "Welcher Bestandteil enthaelt die <strong>Erbinformation</strong> und steuert die Zelle?",
+          question: "Welcher Bestandteil enthält die <strong>Erbinformation</strong> und steuert die Zelle?",
           options: ["Der Zellkern", "Die Zellmembran", "Das Mitochondrium", "Das Zellplasma"],
           correct: 0,
-          explanation: "Richtig! Der Zellkern ist die Steuerzentrale und enthaelt die Erbinformation (die Bauplaene).",
+          explanation: "Richtig! Der Zellkern ist die Steuerzentrale und enthält die Erbinformation (die Baupläne).",
           wrongExplanations: {
-            1: "Die Zellmembran ist die Huelle - sie regelt rein/raus, steuert aber nicht.",
+            1: "Die Zellmembran ist die Hülle - sie regelt rein/raus, steuert aber nicht.",
             2: "Mitochondrien liefern Energie, sie enthalten nicht die Erbinformation der Zelle.",
             3: "Das Zellplasma ist die Grundmasse - es steuert nicht."
           }
         },
         {
           type: "fill-in-blank",
-          question: "Fuelle die Luecken zu den Zellbestandteilen:",
-          text: "Die {{blank}} ist die aeussere Huelle der Zelle. Der {{blank}} steuert die Zelle und enthaelt die Erbinformation. Die {{blank}} liefern die Energie.",
+          question: "Fülle die Lücken zu den Zellbestandteilen:",
+          text: "Die {{blank}} ist die äußere Hülle der Zelle. Der {{blank}} steuert die Zelle und enthält die Erbinformation. Die {{blank}} liefern die Energie.",
           blanks: [
             { correct: "Zellmembran", alternatives: ["zellmembran"] },
             { correct: "Zellkern", alternatives: ["zellkern"] },
             { correct: "Mitochondrien", alternatives: ["mitochondrien", "Mitochondrium"] }
           ],
-          explanation: "Zellmembran (Huelle) - Zellkern (Steuerung) - Mitochondrien (Energie)."
+          explanation: "Zellmembran (Hülle) - Zellkern (Steuerung) - Mitochondrien (Energie)."
         }
       ]
     },
@@ -197,12 +197,12 @@
         html: `
           <h2>Was unterscheidet Pflanzenzelle und Tierzelle?</h2>
           <p>Tierzellen und Pflanzenzellen haben <strong>vieles gemeinsam</strong>: beide besitzen einen Zellkern,
-          eine Zellmembran, Zellplasma und Mitochondrien. Aber die <strong>Pflanzenzelle hat drei Dinge zusaetzlich</strong>,
+          eine Zellmembran, Zellplasma und Mitochondrien. Aber die <strong>Pflanzenzelle hat drei Dinge zusätzlich</strong>,
           die die Tierzelle <strong>nicht</strong> hat.</p>
 
           <div class="analogy-box">
-            <strong>Wie Haus und Zelt:</strong> Ein Zelt (Tierzelle) ist weich und flexibel - es hat nur eine duenne
-            Aussenhaut. Ein Haus (Pflanzenzelle) hat zusaetzlich feste <strong>Mauern</strong> (Zellwand), einen grossen
+            <strong>Wie Haus und Zelt:</strong> Ein Zelt (Tierzelle) ist weich und flexibel - es hat nur eine dünne
+            Außenhaut. Ein Haus (Pflanzenzelle) hat zusätzlich feste <strong>Mauern</strong> (Zellwand), einen großen
             <strong>Wassertank</strong> (Vakuole) und <strong>Solarzellen</strong> auf dem Dach (Chloroplasten).
             Deshalb ist eine Pflanze auch ohne Knochen stabil und kann aufrecht stehen.
           </div>
@@ -212,16 +212,16 @@
 
           <div class="reading-guide">
             <strong>So liest du das Bild:</strong> Beide Zellen haben Zellkern (lila), Mitochondrien (rot) und eine
-            Membran. <strong>Nur die Pflanzenzelle</strong> hat die <strong>dicke gruene Zellwand</strong> aussen, die
-            grossen <strong>blauen Vakuole</strong> in der Mitte und die gruenen <strong>Chloroplasten</strong>.
+            Membran. <strong>Nur die Pflanzenzelle</strong> hat die <strong>dicke grüne Zellwand</strong> außen, die
+            großen <strong>blauen Vakuole</strong> in der Mitte und die grünen <strong>Chloroplasten</strong>.
           </div>
 
           <h3>Die 3 Unterschiede der Pflanzenzelle</h3>
           <table class="icon-table">
             <tr><th>Bestandteil</th><th>Tierzelle</th><th>Pflanzenzelle</th><th>Aufgabe</th></tr>
-            <tr><td><strong>Zellwand</strong></td><td>nein</td><td><strong>ja</strong></td><td>feste Aussenhuelle - gibt der Zelle Halt und Form (Stabilitaet).</td></tr>
-            <tr><td><strong>Chloroplasten</strong></td><td>nein</td><td><strong>ja</strong></td><td>gruene Farbstoffe; fangen das Sonnenlicht ein. Hier stellt die Pflanze ihre Nahrung her - sie machen die Pflanze gruen.</td></tr>
-            <tr><td><strong>Vakuole</strong> (gross)</td><td>nein (nur winzige)</td><td><strong>ja</strong></td><td>grosser Speicherraum mit Zellsaft (Wasser); gibt der Zelle Halt (Druck von innen).</td></tr>
+            <tr><td><strong>Zellwand</strong></td><td>nein</td><td><strong>ja</strong></td><td>feste Außenhülle - gibt der Zelle Halt und Form (Stabilität).</td></tr>
+            <tr><td><strong>Chloroplasten</strong></td><td>nein</td><td><strong>ja</strong></td><td>grüne Farbstoffe; fangen das Sonnenlicht ein. Hier stellt die Pflanze ihre Nahrung her - sie machen die Pflanze grün.</td></tr>
+            <tr><td><strong>Vakuole</strong> (groß)</td><td>nein (nur winzige)</td><td><strong>ja</strong></td><td>großer Speicherraum mit Zellsaft (Wasser); gibt der Zelle Halt (Druck von innen).</td></tr>
           </table>
 
           <table class="icon-table">
@@ -237,14 +237,14 @@
 
           <div class="tip-box">
             <strong>Die 3 Extras der Pflanze merken - "W-C-V":</strong> <strong>W</strong>and,
-            <strong>C</strong>hloroplasten, <strong>V</strong>akuole. Eselsbruecke: Eine Pflanze braucht
+            <strong>C</strong>hloroplasten, <strong>V</strong>akuole. Eselsbrücke: Eine Pflanze braucht
             <em>Wand</em> (Halt), <em>Chloroplasten</em> (Licht) und einen <em>Wassertank</em> (Vakuole) -
             denn sie kann nicht weglaufen und muss sich selbst versorgen.
           </div>
 
           <div class="warning-box">
             <strong>Aufpassen:</strong> <strong>Zellwand</strong> (nur Pflanze, fest) ist nicht dasselbe wie
-            <strong>Zellmembran</strong> (beide Zellen, duenn/weich). Die Pflanzenzelle hat <em>beides</em>: aussen
+            <strong>Zellmembran</strong> (beide Zellen, dünn/weich). Die Pflanzenzelle hat <em>beides</em>: außen
             die Wand, darunter die Membran.
           </div>
         `
@@ -253,55 +253,55 @@
         title: "Beispiel: Tierzelle oder Pflanzenzelle?",
         steps: [
           {
-            label: "Eine Zelle ist gruen",
-            html: `<p>Die Zelle enthaelt gruene <strong>Chloroplasten</strong>. Chloroplasten gibt es nur in
+            label: "Eine Zelle ist grün",
+            html: `<p>Die Zelle enthält grüne <strong>Chloroplasten</strong>. Chloroplasten gibt es nur in
               <strong>Pflanzenzellen</strong> &rarr; es ist eine Pflanzenzelle.</p>`
           },
           {
             label: "Eine Zelle ist weich und rund, ohne feste Wand",
-            html: `<p>Keine Zellwand, keine Chloroplasten, nur eine duenne Membran &rarr; das ist eine
+            html: `<p>Keine Zellwand, keine Chloroplasten, nur eine dünne Membran &rarr; das ist eine
               <strong>Tierzelle</strong>.</p>`
           },
           {
-            label: "Eine Zelle ist eckig und stabil mit grossem Wasserraum",
-            html: `<p>Feste <strong>Zellwand</strong> und grosse <strong>Vakuole</strong> &rarr;
+            label: "Eine Zelle ist eckig und stabil mit großem Wasserraum",
+            html: `<p>Feste <strong>Zellwand</strong> und große <strong>Vakuole</strong> &rarr;
               <strong>Pflanzenzelle</strong>. Die Wand und der Innendruck der Vakuole geben Halt.</p>`
           }
         ]
       },
-      exercisesIntro: "Merke W-C-V: nur die Pflanzenzelle hat Wand, Chloroplasten und (grosse) Vakuole.",
+      exercisesIntro: "Merke W-C-V: nur die Pflanzenzelle hat Wand, Chloroplasten und (große) Vakuole.",
       exercises: [
         {
           type: "multiple-choice",
           question: "Welche drei Teile hat <strong>nur</strong> die Pflanzenzelle (nicht die Tierzelle)?",
           options: [
-            "Zellwand, Chloroplasten und grosse Vakuole",
+            "Zellwand, Chloroplasten und große Vakuole",
             "Zellkern, Zellmembran und Mitochondrien",
             "Zellplasma, Ribosomen und Zellkern",
             "Zellmembran, Vakuole und Mitochondrien"
           ],
           correct: 0,
-          explanation: "Richtig! Zellwand, Chloroplasten und die grosse Vakuole sind typisch fuer die Pflanzenzelle (W-C-V).",
+          explanation: "Richtig! Zellwand, Chloroplasten und die große Vakuole sind typisch für die Pflanzenzelle (W-C-V).",
           wrongExplanations: {
             1: "Diese drei haben beide Zellen - sie sind keine Unterschiede.",
             2: "Auch diese kommen in beiden Zellen vor.",
-            3: "Zellmembran und Mitochondrien haben beide Zellen; nur die grosse Vakuole ist pflanzentypisch."
+            3: "Zellmembran und Mitochondrien haben beide Zellen; nur die große Vakuole ist pflanzentypisch."
           }
         },
         {
           type: "matching",
           question: "Ordne jedem pflanzentypischen Teil seine Aufgabe zu:",
           pairs: [
-            { left: "Zellwand", right: "feste Aussenhuelle, gibt Halt und Form" },
-            { left: "Chloroplasten", right: "gruen, fangen Sonnenlicht ein" },
-            { left: "Vakuole", right: "grosser Speicher mit Zellsaft (Wasser)" }
+            { left: "Zellwand", right: "feste Außenhülle, gibt Halt und Form" },
+            { left: "Chloroplasten", right: "grün, fangen Sonnenlicht ein" },
+            { left: "Vakuole", right: "großer Speicher mit Zellsaft (Wasser)" }
           ],
-          explanation: "Zellwand = Halt, Chloroplasten = Licht/gruen, Vakuole = Wasserspeicher."
+          explanation: "Zellwand = Halt, Chloroplasten = Licht/grün, Vakuole = Wasserspeicher."
         },
         {
           type: "fill-in-blank",
-          question: "Vervollstaendige die Unterschiede:",
-          text: "Nur die Pflanzenzelle hat eine feste {{blank}} aussen, gruene {{blank}}, die das Sonnenlicht einfangen, und eine grosse {{blank}} mit Zellsaft.",
+          question: "Vervollständige die Unterschiede:",
+          text: "Nur die Pflanzenzelle hat eine feste {{blank}} außen, grüne {{blank}}, die das Sonnenlicht einfangen, und eine große {{blank}} mit Zellsaft.",
           blanks: [
             { correct: "Zellwand", alternatives: ["zellwand"] },
             { correct: "Chloroplasten", alternatives: ["chloroplasten", "Chloroplast"] },
@@ -315,16 +315,23 @@
           options: [
             "Beide haben Zellkern, Zellmembran, Zellplasma und Mitochondrien.",
             "Beide haben eine feste Zellwand.",
-            "Beide haben gruene Chloroplasten.",
-            "Beide haben eine grosse Vakuole."
+            "Beide haben grüne Chloroplasten.",
+            "Beide haben eine große Vakuole."
           ],
           correct: 0,
           explanation: "Richtig! Zellkern, Zellmembran, Zellplasma und Mitochondrien kommen in beiden Zellen vor.",
           wrongExplanations: {
             1: "Die feste Zellwand hat nur die Pflanzenzelle.",
             2: "Chloroplasten hat nur die Pflanzenzelle.",
-            3: "Eine grosse Vakuole hat nur die Pflanzenzelle."
+            3: "Eine große Vakuole hat nur die Pflanzenzelle."
           }
+        },
+        {
+          type: "free-text",
+          question: "Erkläre mit eigenen Worten den <strong>Unterschied zwischen Tier- und Pflanzenzelle</strong>.",
+          hint: "Was hat die Pflanzenzelle zusätzlich (W-C-V)? Was haben beide gemeinsam?",
+          minWords: 12,
+          modelAnswer: "Beide Zellen haben einen Zellkern, eine Zellmembran, Zellplasma und Mitochondrien. Die Pflanzenzelle hat zusätzlich drei Dinge, die der Tierzelle fehlen: eine feste Zellwand (gibt Halt), grüne Chloroplasten (fangen Sonnenlicht ein) und eine große Vakuole (Wasserspeicher)."
         }
       ]
     }

@@ -1,16 +1,16 @@
 /**
  * Modul 4 - Infektionskrankheiten (Biologie KA 2, Klasse 8, M-Niveau).
  *   L6 Bakterien & Viren - Aufbau und Vermehrung (mit Unterschied)
- *   L7 Infektionskrankheiten - Erreger, Inkubationszeit, Symptome, Uebertragung, Steckbriefe
+ *   L7 Infektionskrankheiten - Erreger, Inkubationszeit, Symptome, Übertragung, Steckbriefe
  *
  * Inhalte in eigenen Worten nach den Buddy-Books (Viren/Bakterien), dem
  * Salmonellose-AB und der Begriffsliste. Eigene SVG-Grafiken. Zielgruppe: Leonie.
  */
 (function () {
 
-  // Virus: Eiweisshuelle + Stacheln + Erbinformation (nummeriert)
+  // Virus: Eiweißhülle + Stacheln + Erbinformation (nummeriert)
   const virusSvg = `
-    <svg viewBox="0 0 300 300" role="img" aria-label="Aufbau eines Virus mit Stacheln, Eiweisshuelle und Erbinformation" style="max-width:280px;width:100%;height:auto;display:block;margin:1rem auto;font-family:sans-serif;">
+    <svg viewBox="0 0 300 300" role="img" aria-label="Aufbau eines Virus mit Stacheln, Eiweißhülle und Erbinformation" style="max-width:280px;width:100%;height:auto;display:block;margin:1rem auto;font-family:sans-serif;">
       <g stroke="#4338ca" stroke-width="3">
         <line x1="220" y1="150" x2="238" y2="150"/><line x1="199.5" y1="199.5" x2="212.2" y2="212.2"/>
         <line x1="150" y1="220" x2="150" y2="238"/><line x1="100.5" y1="199.5" x2="87.8" y2="212.2"/>
@@ -31,9 +31,9 @@
       </g>
     </svg>`;
 
-  // Bakterie: Zellwand, Zellmembran/Plasma, Erbinformation (Ring), Geissel (nummeriert)
+  // Bakterie: Zellwand, Zellmembran/Plasma, Erbinformation (Ring), Geißel (nummeriert)
   const bacteriaSvg = `
-    <svg viewBox="0 0 410 240" role="img" aria-label="Aufbau einer Bakterienzelle mit Zellwand, Zellplasma, Erbinformation und Geissel" style="max-width:410px;width:100%;height:auto;display:block;margin:1rem auto;font-family:sans-serif;">
+    <svg viewBox="0 0 410 240" role="img" aria-label="Aufbau einer Bakterienzelle mit Zellwand, Zellplasma, Erbinformation und Geißel" style="max-width:410px;width:100%;height:auto;display:block;margin:1rem auto;font-family:sans-serif;">
       <path d="M 320 120 q 16 -16 32 0 q 16 16 32 0 q 16 -16 24 -6" fill="none" stroke="#78350f" stroke-width="3"/>
       <rect x="40" y="65" width="280" height="110" rx="55" fill="#fde68a" stroke="#b45309" stroke-width="5"/>
       <rect x="52" y="77" width="256" height="86" rx="43" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
@@ -59,11 +59,11 @@
         html: `
           <h2>Zwei winzige Krankheitserreger</h2>
           <p>Viele Infektionskrankheiten werden durch <strong>Bakterien</strong> oder <strong>Viren</strong>
-          ausgeloest. Beide sind so klein, dass man sie nur unter dem Mikroskop sieht. Aber sie sind sehr
+          ausgelöst. Beide sind so klein, dass man sie nur unter dem Mikroskop sieht. Aber sie sind sehr
           verschieden - und dieser Unterschied ist <strong>der wichtigste Punkt</strong> in diesem Thema.</p>
 
           <div class="analogy-box">
-            <strong>Lebewesen oder Schmarotzer?</strong> Ein <strong>Bakterium</strong> ist wie ein selbststaendiger
+            <strong>Lebewesen oder Schmarotzer?</strong> Ein <strong>Bakterium</strong> ist wie ein selbstständiger
             Mini-Handwerker: Es ist eine eigene Zelle, lebt und vermehrt sich selbst. Ein <strong>Virus</strong> ist
             eher wie ein Computervirus, der einen fremden Rechner braucht: Es ist <em>keine</em> Zelle und kann sich
             nur vermehren, wenn es eine fremde <strong>Wirtszelle</strong> kapert.
@@ -73,33 +73,33 @@
           ${bacteriaSvg}
           <table class="icon-table">
             <tr><th>Nr.</th><th>Bestandteil</th><th>Aufgabe</th></tr>
-            <tr><td><strong>1</strong></td><td>Zellwand</td><td>feste Huelle, gibt dem Bakterium Halt und Form.</td></tr>
-            <tr><td><strong>2</strong></td><td>Zellplasma (mit Zellmembran)</td><td>Grundmasse im Inneren; hier laufen die Lebensvorgaenge ab.</td></tr>
+            <tr><td><strong>1</strong></td><td>Zellwand</td><td>feste Hülle, gibt dem Bakterium Halt und Form.</td></tr>
+            <tr><td><strong>2</strong></td><td>Zellplasma (mit Zellmembran)</td><td>Grundmasse im Inneren; hier laufen die Lebensvorgänge ab.</td></tr>
             <tr><td><strong>3</strong></td><td>Erbinformation</td><td>frei im Zellplasma - ein Bakterium hat <strong>keinen echten Zellkern</strong>.</td></tr>
-            <tr><td><strong>4</strong></td><td>Geissel</td><td>fadenartiger "Schwanz" zur Fortbewegung (haben nicht alle Bakterien).</td></tr>
+            <tr><td><strong>4</strong></td><td>Geißel</td><td>fadenartiger "Schwanz" zur Fortbewegung (haben nicht alle Bakterien).</td></tr>
           </table>
           <p>Ein Bakterium ist eine <strong>eigene Zelle</strong> und damit ein <strong>Lebewesen</strong>. Es kann
           sich <strong>selbst vermehren</strong> - durch <strong>Zellteilung</strong>: Aus einem Bakterium werden
-          zwei, aus zwei vier, und so weiter. Dafuer braucht es nur die richtigen Bedingungen:</p>
+          zwei, aus zwei vier, und so weiter. Dafür braucht es nur die richtigen Bedingungen:</p>
           <div class="info-card">
-            <strong>Bakterien vermehren sich gut bei:</strong> Waerme (am liebsten ca. 30-37 &deg;C),
-            Naehrstoffen (Nahrung) und Feuchtigkeit. Deshalb wachsen sie z.B. auf warmem, feuchtem Essen besonders schnell.
+            <strong>Bakterien vermehren sich gut bei:</strong> Wärme (am liebsten ca. 30-37 &deg;C),
+            Nährstoffen (Nahrung) und Feuchtigkeit. Deshalb wachsen sie z.B. auf warmem, feuchtem Essen besonders schnell.
           </div>
 
           <h3>Das Virus - kein Lebewesen</h3>
           ${virusSvg}
           <table class="icon-table">
             <tr><th>Nr.</th><th>Bestandteil</th><th>Aufgabe</th></tr>
-            <tr><td><strong>1</strong></td><td>Stacheln</td><td>aussen; damit dockt das Virus an eine Wirtszelle an.</td></tr>
-            <tr><td><strong>2</strong></td><td>Eiweisshuelle</td><td>schuetzende Huelle aus Eiweiss (umgibt das Virus).</td></tr>
-            <tr><td><strong>3</strong></td><td>Erbinformation</td><td>im Inneren; der "Bauplan" fuer neue Viren.</td></tr>
+            <tr><td><strong>1</strong></td><td>Stacheln</td><td>außen; damit dockt das Virus an eine Wirtszelle an.</td></tr>
+            <tr><td><strong>2</strong></td><td>Eiweißhülle</td><td>schützende Hülle aus Eiweiß (umgibt das Virus).</td></tr>
+            <tr><td><strong>3</strong></td><td>Erbinformation</td><td>im Inneren; der "Bauplan" für neue Viren.</td></tr>
           </table>
           <p>Ein Virus ist <strong>keine Zelle</strong> und <strong>kein Lebewesen</strong>. Es kann sich
           <strong>nicht selbst</strong> vermehren. Stattdessen:</p>
           <div class="info-card">
             <strong>So vermehrt sich ein Virus:</strong> Es dockt mit den Stacheln an eine <strong>Wirtszelle</strong>
             an und schleust seine Erbinformation hinein. Die Zelle wird umprogrammiert und muss nun selbst viele neue
-            Viren bauen. Schliesslich platzt sie, und die neuen Viren befallen weitere Zellen.
+            Viren bauen. Schließlich platzt sie, und die neuen Viren befallen weitere Zellen.
           </div>
 
           <h3>Der wichtigste Unterschied</h3>
@@ -107,13 +107,13 @@
             <tr><th></th><th>Bakterien</th><th>Viren</th></tr>
             <tr><td>Lebewesen?</td><td><strong>ja</strong> (eigene Zelle)</td><td><strong>nein</strong> (keine Zelle)</td></tr>
             <tr><td>Vermehrung</td><td><strong>selbst</strong>, durch Zellteilung</td><td>nur in einer <strong>Wirtszelle</strong></td></tr>
-            <tr><td>Groesse</td><td>groesser</td><td>viel kleiner</td></tr>
+            <tr><td>Größe</td><td>größer</td><td>viel kleiner</td></tr>
             <tr><td>Behandlung</td><td><strong>Antibiotika</strong> helfen</td><td>Antibiotika helfen <strong>nicht</strong></td></tr>
           </table>
 
           <div class="why-context">
             <strong>Warum lernen wir das?</strong> Auf der KA stehen "Bakterien, Viren". Die Lieblingsfrage der
-            Lehrkraefte: <em>Was ist der Unterschied zwischen Bakterien und Viren?</em> Antwort-Kern: Bakterien sind
+            Lehrkräfte: <em>Was ist der Unterschied zwischen Bakterien und Viren?</em> Antwort-Kern: Bakterien sind
             Lebewesen und vermehren sich selbst, Viren sind keine Lebewesen und brauchen eine Wirtszelle.
           </div>
 
@@ -124,7 +124,7 @@
           </div>
 
           <div class="warning-box">
-            <strong>Haeufiger Fehler:</strong> "Antibiotika gegen Grippe." Grippe wird von <em>Viren</em> ausgeloest -
+            <strong>Häufiger Fehler:</strong> "Antibiotika gegen Grippe." Grippe wird von <em>Viren</em> ausgelöst -
             da helfen Antibiotika <strong>nicht</strong>. Antibiotika wirken nur gegen <em>Bakterien</em>.
           </div>
         `
@@ -148,7 +148,7 @@
           {
             label: "4. Freisetzen",
             html: `<p>Die Zelle platzt, die neuen Viren werden frei und befallen <strong>weitere Zellen</strong>.
-              Bei einem Bakterium waere das anders: Es wuerde sich einfach selbst teilen.</p>`
+              Bei einem Bakterium wäre das anders: Es würde sich einfach selbst teilen.</p>`
           }
         ]
       },
@@ -166,21 +166,21 @@
           correct: 0,
           explanation: "Richtig! Bakterien sind eigene Zellen (Lebewesen) und teilen sich selbst. Viren sind keine Lebewesen und vermehren sich nur in einer fremden Zelle.",
           wrongExplanations: {
-            1: "Umgekehrt: Bakterien sind groesser als Viren.",
+            1: "Umgekehrt: Bakterien sind größer als Viren.",
             2: "Genau andersherum - Bakterien sind Lebewesen, Viren nicht.",
             3: "Nur Viren brauchen eine Wirtszelle. Bakterien teilen sich selbst."
           }
         },
         {
           type: "matching",
-          question: "Ordne die Aussagen richtig zu (Bakterien oder Viren):",
+          question: "Vervollständige jeden Satz - ordne das passende Satzende zu:",
           pairs: [
-            { left: "vermehren sich durch Zellteilung", right: "Bakterien" },
-            { left: "brauchen eine Wirtszelle", right: "Viren" },
-            { left: "sind Lebewesen (eigene Zelle)", right: "Bakterien (auch)" },
-            { left: "haben Stacheln und eine Eiweisshuelle", right: "Viren (auch)" }
+            { left: "Bakterien vermehren sich ...", right: "selbst durch Zellteilung" },
+            { left: "Viren vermehren sich ...", right: "nur in einer Wirtszelle" },
+            { left: "Ein Bakterium ist ...", right: "ein Lebewesen (eigene Zelle)" },
+            { left: "Ein Virus ist ...", right: "kein Lebewesen, sondern braucht einen Wirt" }
           ],
-          explanation: "Bakterien: Lebewesen, Zellteilung. Viren: keine Lebewesen, Wirtszelle, Eiweisshuelle mit Stacheln."
+          explanation: "Bakterien: Lebewesen, vermehren sich selbst durch Zellteilung. Viren: keine Lebewesen, brauchen eine Wirtszelle."
         },
         {
           type: "ordering",
@@ -196,7 +196,7 @@
         },
         {
           type: "fill-in-blank",
-          question: "Fuelle die Luecken aus:",
+          question: "Fülle die Lücken aus:",
           text: "Ein Bakterium ist ein {{blank}} und vermehrt sich selbst durch {{blank}}. Ein Virus ist kein Lebewesen und braucht zur Vermehrung eine {{blank}}.",
           blanks: [
             { correct: "Lebewesen", alternatives: ["lebewesen"] },
@@ -204,27 +204,34 @@
             { correct: "Wirtszelle", alternatives: ["wirtszelle", "Zelle"] }
           ],
           explanation: "Bakterium = Lebewesen, Zellteilung. Virus = keine eigene Vermehrung, braucht eine Wirtszelle."
+        },
+        {
+          type: "free-text",
+          question: "Erkläre mit eigenen Worten den <strong>Unterschied zwischen Bakterien und Viren</strong> (nenne mindestens zwei Punkte).",
+          hint: "Denk an: Lebewesen oder nicht? Wie vermehren sie sich? Helfen Antibiotika?",
+          minWords: 15,
+          modelAnswer: "Bakterien sind Lebewesen und bestehen aus einer eigenen Zelle; sie vermehren sich selbst durch Zellteilung. Viren sind keine Lebewesen und brauchen zur Vermehrung eine fremde Wirtszelle. Außerdem helfen Antibiotika nur gegen Bakterien, nicht gegen Viren."
         }
       ]
     },
 
     // ===================================================================
-    // Lektion 7: Infektionskrankheiten - Erreger, Symptome, Uebertragung
+    // Lektion 7: Infektionskrankheiten - Erreger, Symptome, Übertragung
     // ===================================================================
     {
       id: 7,
-      title: "Infektionskrankheiten - Erreger, Symptome, Uebertragung",
+      title: "Infektionskrankheiten - Erreger, Symptome, Übertragung",
       explanation: {
         html: `
           <h2>Wie Krankheiten entstehen und sich ausbreiten</h2>
           <p>Eine <strong>Infektionskrankheit</strong> entsteht, wenn <strong>Krankheitserreger</strong>
-          (z.B. Bakterien oder Viren) in den Koerper gelangen und sich dort vermehren. Damit du ueber jede
+          (z.B. Bakterien oder Viren) in den Körper gelangen und sich dort vermehren. Damit du über jede
           Krankheit reden kannst, brauchst du vier <strong>Fachbegriffe</strong>.</p>
 
           <div class="analogy-box">
-            <strong>Wie ungebetene Gaeste:</strong> Die Erreger sind wie Eindringlinge, die sich in deinem Koerper
+            <strong>Wie ungebetene Gäste:</strong> Die Erreger sind wie Eindringlinge, die sich in deinem Körper
             breit machen. Eine Zeit lang merkst du nichts (sie "richten sich erst ein"), dann zeigen sich die ersten
-            Beschwerden. Und wie man sich ansteckt (die "Tuer", durch die sie kommen), ist bei jeder Krankheit anders.
+            Beschwerden. Und wie man sich ansteckt (die "Tür", durch die sie kommen), ist bei jeder Krankheit anders.
           </div>
 
           <h3>Die 4 wichtigen Begriffe</h3>
@@ -233,43 +240,43 @@
             <tr><td><strong>Krankheitserreger</strong></td><td>das Lebewesen/Teilchen, das krank macht - z.B. Bakterien, Viren (auch Pilze).</td></tr>
             <tr><td><strong>Inkubationszeit</strong></td><td>die Zeit von der Ansteckung bis die ersten Krankheitszeichen kommen ("man hat sich angesteckt, ist aber noch nicht krank").</td></tr>
             <tr><td><strong>Symptome</strong></td><td>die Krankheitszeichen, die man merkt - z.B. Fieber, Husten, Bauchschmerzen.</td></tr>
-            <tr><td><strong>Uebertragung</strong></td><td>der Weg, auf dem der Erreger von einem zum anderen kommt.</td></tr>
+            <tr><td><strong>Übertragung</strong></td><td>der Weg, auf dem der Erreger von einem zum anderen kommt.</td></tr>
           </table>
 
-          <h3>Wie werden Erreger uebertragen?</h3>
+          <h3>Wie werden Erreger übertragen?</h3>
           <table class="icon-table">
-            <tr><th>Uebertragungsweg</th><th>Beispiel</th></tr>
-            <tr><td>Troepfcheninfektion (Einatmen)</td><td>Husten, Niesen, Sprechen - z.B. Grippe, Masern.</td></tr>
-            <tr><td>Beruehrung / Schmierinfektion</td><td>verunreinigte Haende, Tuerklinken, Lebensmittel - z.B. Salmonellen.</td></tr>
-            <tr><td>Blut</td><td>z.B. ueber Wunden oder Blutuebertragung.</td></tr>
+            <tr><th>Übertragungsweg</th><th>Beispiel</th></tr>
+            <tr><td>Tröpfcheninfektion (Einatmen)</td><td>Husten, Niesen, Sprechen - z.B. Grippe, Masern.</td></tr>
+            <tr><td>Berührung / Schmierinfektion</td><td>verunreinigte Hände, Türklinken, Lebensmittel - z.B. Salmonellen.</td></tr>
+            <tr><td>Blut</td><td>z.B. über Wunden oder Blutübertragung.</td></tr>
           </table>
 
           <h3>Krankheiten und ihre Erreger</h3>
           <table class="icon-table">
             <tr><th>Durch Bakterien</th><th>Durch Viren</th></tr>
-            <tr><td>Salmonellose, Tuberkulose, Scharlach, Keuchhusten, Wundstarrkrampf, Blasenentzuendung</td><td>Grippe, Masern, Erkaeltung</td></tr>
+            <tr><td>Salmonellose, Tuberkulose, Scharlach, Keuchhusten, Wundstarrkrampf, Blasenentzündung</td><td>Grippe, Masern, Erkältung</td></tr>
           </table>
 
           <div class="info-card">
-            <strong>Bakterien sind nicht nur schaedlich!</strong> Viele sind sogar nuetzlich: Sie bilden den
-            Saeureschutzmantel der Haut, helfen im Darm bei der Verdauung, liefern wichtige Vitamine und werden zur
-            Herstellung von Lebensmitteln genutzt (z.B. Joghurt und Kaese).
+            <strong>Bakterien sind nicht nur schädlich!</strong> Viele sind sogar nützlich: Sie bilden den
+            Säureschutzmantel der Haut, helfen im Darm bei der Verdauung, liefern wichtige Vitamine und werden zur
+            Herstellung von Lebensmitteln genutzt (z.B. Joghurt und Käse).
           </div>
 
           <h3>Steckbrief-Beispiel: Salmonellose</h3>
           <table class="icon-table">
             <tr><th>Merkmal</th><th>Salmonellose</th></tr>
             <tr><td>Erreger</td><td>Salmonellen (<strong>Bakterien</strong>)</td></tr>
-            <tr><td>Uebertragung</td><td>verunreinigte Nahrung: rohe Eier, Milch, Fleisch; mangelnde Hygiene; unterbrochene Kuehlkette.</td></tr>
+            <tr><td>Übertragung</td><td>verunreinigte Nahrung: rohe Eier, Milch, Fleisch; mangelnde Hygiene; unterbrochene Kühlkette.</td></tr>
             <tr><td>Inkubationszeit</td><td>ca. 5 Stunden bis 3 Tage</td></tr>
-            <tr><td>Symptome</td><td>Bauchschmerzen, Durchfall, Fieber, Uebelkeit, manchmal Erbrechen.</td></tr>
-            <tr><td>Schutz</td><td>Haende waschen, Lebensmittel gut kuehlen und durchgaren.</td></tr>
+            <tr><td>Symptome</td><td>Bauchschmerzen, Durchfall, Fieber, Übelkeit, manchmal Erbrechen.</td></tr>
+            <tr><td>Schutz</td><td>Hände waschen, Lebensmittel gut kühlen und durchgaren.</td></tr>
           </table>
 
           <div class="why-context">
             <strong>Warum lernen wir das?</strong> Auf der KA steht "Infektionskrankheiten: Bakterien, Viren".
-            Typische Aufgaben: die Begriffe (Inkubationszeit, Symptome, Uebertragung) erklaeren, eine Krankheit
-            ihrem Erreger zuordnen oder einen kurzen Steckbrief ausfuellen.
+            Typische Aufgaben: die Begriffe (Inkubationszeit, Symptome, Übertragung) erklären, eine Krankheit
+            ihrem Erreger zuordnen oder einen kurzen Steckbrief ausfüllen.
           </div>
 
           <div class="tip-box">
@@ -278,8 +285,8 @@
           </div>
 
           <div class="warning-box">
-            <strong>Schutz vor Ansteckung:</strong> regelmaessig <strong>Haende waschen</strong>, in die Armbeuge
-            husten/niesen, Abstand zu Kranken, Lebensmittel kuehlen - und gegen viele Krankheiten gibt es eine
+            <strong>Schutz vor Ansteckung:</strong> regelmäßig <strong>Hände waschen</strong>, in die Armbeuge
+            husten/niesen, Abstand zu Kranken, Lebensmittel kühlen - und gegen viele Krankheiten gibt es eine
             <strong>Impfung</strong> (z.B. Masern, Wundstarrkrampf).
           </div>
         `
@@ -290,21 +297,21 @@
           {
             label: "Welcher Erreger?",
             html: `<p>Bei der <strong>Salmonellose</strong> sind es <strong>Salmonellen</strong> - das sind
-              <strong>Bakterien</strong>. Also helfen hier Antibiotika (bei schweren Faellen).</p>`
+              <strong>Bakterien</strong>. Also helfen hier Antibiotika (bei schweren Fällen).</p>`
           },
           {
             label: "Wie steckt man sich an?",
-            html: `<p>Ueber <strong>verunreinigte Nahrung</strong> (rohe Eier, Fleisch) und schlechte Hygiene.
-              &rarr; Uebertragung durch Beruehrung/Schmierinfektion.</p>`
+            html: `<p>Über <strong>verunreinigte Nahrung</strong> (rohe Eier, Fleisch) und schlechte Hygiene.
+              &rarr; Übertragung durch Berührung/Schmierinfektion.</p>`
           },
           {
             label: "Was sind die Symptome?",
-            html: `<p>Bauchschmerzen, Durchfall, Fieber, Uebelkeit. Sie kommen nach der
+            html: `<p>Bauchschmerzen, Durchfall, Fieber, Übelkeit. Sie kommen nach der
               <strong>Inkubationszeit</strong> von 5 Stunden bis 3 Tagen.</p>`
           }
         ]
       },
-      exercisesIntro: "Begriffe: Erreger, Inkubationszeit (Wartezeit bis krank), Symptome (Beschwerden), Uebertragung (Ansteckungsweg).",
+      exercisesIntro: "Begriffe: Erreger, Inkubationszeit (Wartezeit bis krank), Symptome (Beschwerden), Übertragung (Ansteckungsweg).",
       exercises: [
         {
           type: "matching",
@@ -313,20 +320,18 @@
             { left: "Krankheitserreger", right: "macht krank, z.B. Bakterien oder Viren" },
             { left: "Inkubationszeit", right: "Zeit von der Ansteckung bis zu den ersten Symptomen" },
             { left: "Symptome", right: "die Krankheitszeichen, z.B. Fieber und Husten" },
-            { left: "Uebertragung", right: "der Weg, wie der Erreger weitergegeben wird" }
+            { left: "Übertragung", right: "der Weg, wie der Erreger weitergegeben wird" }
           ],
-          explanation: "Erreger = was krank macht; Inkubationszeit = Wartezeit; Symptome = Beschwerden; Uebertragung = Ansteckungsweg."
+          explanation: "Erreger = was krank macht; Inkubationszeit = Wartezeit; Symptome = Beschwerden; Übertragung = Ansteckungsweg."
         },
         {
           type: "matching",
-          question: "Ordne jede Krankheit ihrem Erreger zu:",
+          question: "Ordne jede Krankheits-Gruppe ihrem Erreger zu:",
           pairs: [
-            { left: "Grippe", right: "Virus" },
-            { left: "Salmonellose", right: "Bakterium" },
-            { left: "Masern", right: "Virus" },
-            { left: "Tuberkulose", right: "Bakterium" }
+            { left: "Grippe, Masern, Erkältung", right: "werden von Viren ausgelöst" },
+            { left: "Salmonellose, Tuberkulose, Scharlach", right: "werden von Bakterien ausgelöst" }
           ],
-          explanation: "Grippe und Masern werden von Viren ausgeloest; Salmonellose und Tuberkulose von Bakterien."
+          explanation: "Grippe, Masern und Erkältung werden von Viren ausgelöst; Salmonellose, Tuberkulose und Scharlach von Bakterien."
         },
         {
           type: "multiple-choice",
@@ -347,21 +352,21 @@
         },
         {
           type: "fill-in-blank",
-          question: "Fuelle den Steckbrief der Salmonellose aus:",
-          text: "Der Erreger der Salmonellose ist ein {{blank}} (Salmonellen). Man steckt sich ueber verunreinigte {{blank}} an. Typische Symptome sind Durchfall und {{blank}}.",
+          question: "Fülle den Steckbrief der Salmonellose aus:",
+          text: "Der Erreger der Salmonellose ist ein {{blank}} (Salmonellen). Man steckt sich über verunreinigte {{blank}} an. Typische Symptome sind Durchfall und {{blank}}.",
           blanks: [
             { correct: "Bakterium", alternatives: ["bakterium", "Bakterien"] },
             { correct: "Nahrung", alternatives: ["nahrung", "Lebensmittel", "Eier"] },
-            { correct: "Bauchschmerzen", alternatives: ["bauchschmerzen", "Fieber", "Uebelkeit", "Erbrechen"] }
+            { correct: "Bauchschmerzen", alternatives: ["bauchschmerzen", "Fieber", "Übelkeit", "Erbrechen"] }
           ],
-          explanation: "Salmonellen sind Bakterien; Ansteckung ueber verunreinigte Nahrung; Symptome u.a. Durchfall, Bauchschmerzen, Fieber."
+          explanation: "Salmonellen sind Bakterien; Ansteckung über verunreinigte Nahrung; Symptome u.a. Durchfall, Bauchschmerzen, Fieber."
         },
         {
           type: "free-text",
-          question: "Nenne <strong>zwei Moeglichkeiten</strong>, wie man sich vor einer Ansteckung schuetzen kann, und begruende kurz.",
+          question: "Nenne <strong>zwei Möglichkeiten</strong>, wie man sich vor einer Ansteckung schützen kann, und begründe kurz.",
           hint: "Denk an Hygiene, Husten/Niesen, Lebensmittel und Impfung.",
           minWords: 10,
-          modelAnswer: "1. Regelmaessig die Haende waschen - so entfernt man Erreger, bevor sie in den Koerper gelangen. 2. In die Armbeuge husten und niesen sowie Abstand zu Kranken halten - so verhindert man die Troepfcheninfektion. Zusaetzlich schuetzt eine Impfung gegen viele Krankheiten und Lebensmittel sollten gut gekuehlt und durchgegart werden."
+          modelAnswer: "1. Regelmäßig die Hände waschen - so entfernt man Erreger, bevor sie in den Körper gelangen. 2. In die Armbeuge husten und niesen sowie Abstand zu Kranken halten - so verhindert man die Tröpfcheninfektion. Zusätzlich schützt eine Impfung gegen viele Krankheiten und Lebensmittel sollten gut gekühlt und durchgegart werden."
         }
       ]
     }
