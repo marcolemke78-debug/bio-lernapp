@@ -29,9 +29,10 @@
         <circle cx="250" cy="103" r="3.5" fill="#6b4423"/>
         <circle cx="340" cy="98" r="3.5" fill="#6b4423"/>
       </g>
-      <!-- Haar (Schaft + Wurzel) -->
-      <rect class="bio-part" data-name="Haar" data-info="Schützt und wärmt; stellt sich bei Kälte auf (Gänsehaut)." x="196" y="14" width="9" height="262" rx="4" fill="#8b5a2b"/>
+      <!-- Haar (Schaft + Wurzel) + Haarmuskel -->
+      <rect class="bio-part" data-name="Haar" data-info="Schützt und wärmt den Körper." x="196" y="14" width="9" height="262" rx="4" fill="#8b5a2b"/>
       <ellipse class="bio-part" data-name="Haarwurzel" data-info="Hier wächst das Haar nach (im Haarbalg)." cx="200" cy="280" rx="15" ry="11" fill="#6b4423"/>
+      <line class="bio-part" data-name="Haarmuskel" data-info="Kleiner Muskel am Haar. Zieht sich bei Kälte oder Schreck zusammen und richtet das Haar auf - das ist die Gänsehaut." x1="205" y1="235" x2="240" y2="130" stroke="#c0686b" stroke-width="5" stroke-linecap="round"/>
       <!-- Talgdrüse am Haarbalg -->
       <g class="bio-part" data-name="Talgdrüse" data-info="Gibt Fett (Talg) ab - hält Haut und Haare geschmeidig und schützt vor dem Austrocknen.">
         <circle cx="245" cy="160" r="15" fill="#f6c343" stroke="#d99b1c" stroke-width="1.5"/>
@@ -67,6 +68,7 @@
           <circle cx="402" cy="335" r="13" fill="#1d4ed8"/><text x="402" y="340">6</text>
           <circle cx="355" cy="250" r="13" fill="#1d4ed8"/><text x="355" y="255">7</text>
           <circle cx="170" cy="210" r="13" fill="#1d4ed8"/><text x="170" y="215">8</text>
+          <circle cx="258" cy="178" r="13" fill="#1d4ed8"/><text x="258" y="183">9</text>
         </g>
       </g>
     </svg>
@@ -143,13 +145,14 @@
           <table class="icon-table">
             <tr><th>Nr.</th><th>Bestandteil</th><th>Schicht</th><th>Funktion (Aufgabe)</th></tr>
             <tr><td><strong>1</strong></td><td>Hornschicht</td><td>Oberhaut</td><td>Außen, aus verhornten <em>toten</em> Zellen. Schützt vor Krankheitserregern, Austrocknung und Verletzungen.</td></tr>
-            <tr><td><strong>2</strong></td><td>Keimschicht</td><td>Oberhaut</td><td>Bildet ständig <em>neue</em> Hautzellen, die nach oben wandern. Hier sitzen die Pigmentzellen (Farbstoff <strong>Melanin</strong>) - Schutz vor UV-Strahlung der Sonne.</td></tr>
-            <tr><td><strong>3</strong></td><td>Haar</td><td>Leder-/Oberhaut</td><td>Schützt und wärmt; stellt sich bei Kälte auf (Gänsehaut).</td></tr>
+            <tr><td><strong>2</strong></td><td>Keimschicht <span style="white-space:nowrap">(mit Pigmentschicht)</span></td><td>Oberhaut</td><td>Bildet ständig <em>neue</em> Hautzellen, die nach oben wandern. Im unteren Teil (der <strong>Pigmentschicht</strong>) sitzen die Pigmentzellen mit dem Farbstoff <strong>Melanin</strong> - Schutz vor UV-Strahlung der Sonne.</td></tr>
+            <tr><td><strong>3</strong></td><td>Haar</td><td>Lederhaut</td><td>Wächst aus der Lederhaut und ragt durch die Oberhaut nach außen. Schützt und wärmt den Körper.</td></tr>
             <tr><td><strong>4</strong></td><td>Talgdrüse</td><td>Lederhaut</td><td>Gibt Fett (Talg) ab - hält Haut und Haare geschmeidig und schützt vor dem Austrocknen.</td></tr>
             <tr><td><strong>5</strong></td><td>Haarwurzel</td><td>Lederhaut</td><td>Hier wächst das Haar nach (im Haarbalg).</td></tr>
             <tr><td><strong>6</strong></td><td>Schweißdrüse</td><td>Lederhaut (reicht bis Unterhaut)</td><td>Bildet Schweiß. Beim Verdunsten kühlt das den Körper (Temperaturregelung).</td></tr>
             <tr><td><strong>7</strong></td><td>Blutgefäß</td><td>Lederhaut</td><td>Versorgt die Haut mit Nährstoffen und Sauerstoff und transportiert Wärme.</td></tr>
             <tr><td><strong>8</strong></td><td>Tastkörperchen (Sinneszelle)</td><td>Lederhaut</td><td>Nimmt Reize wahr (Druck, Berührung) - dadurch ist die Haut ein <strong>Sinnesorgan</strong>.</td></tr>
+            <tr><td><strong>9</strong></td><td>Haarmuskel</td><td>Lederhaut</td><td>Kleiner Muskel am Haar. Zieht sich bei Kälte oder Schreck zusammen und <strong>richtet das Haar auf</strong> - so entsteht die <strong>Gänsehaut</strong>.</td></tr>
           </table>
           <p>Die <strong>Unterhaut</strong> besteht vor allem aus <strong>Fettgewebe</strong>. Es speichert
           Energie, polstert den Körper und hält ihn warm (Wärmeisolierung).</p>
@@ -206,9 +209,10 @@
             { left: "2", right: "Keimschicht" },
             { left: "4", right: "Talgdrüse" },
             { left: "6", right: "Schweißdrüse" },
-            { left: "8", right: "Tastkörperchen" }
+            { left: "8", right: "Tastkörperchen" },
+            { left: "9", right: "Haarmuskel" }
           ],
-          explanation: "1 Hornschicht (außen), 2 Keimschicht (bildet neue Zellen), 4 Talgdrüse (Fett), 6 Schweißdrüse (Kühlung), 8 Tastkörperchen (Fühlen)."
+          explanation: "1 Hornschicht (außen), 2 Keimschicht (bildet neue Zellen), 4 Talgdrüse (Fett), 6 Schweißdrüse (Kühlung), 8 Tastkörperchen (Fühlen), 9 Haarmuskel (Gänsehaut)."
         },
         {
           type: "matching",
@@ -277,12 +281,13 @@
           <h3>Die Haut als Sinnesorgan</h3>
           <p>Die Haut ist eines deiner <strong>fünf Sinnesorgane</strong> (Auge, Ohr, Nase, Zunge, <strong>Haut</strong>).
           Ihr Sinn ist das <strong>Tasten / Fühlen</strong>. In der Lederhaut liegen verschiedene
-          <strong>Sinneszellen</strong> (Tastkörperchen). Jede Art reagiert auf etwas anderes:</p>
+          <strong>Sinneszellen</strong>. Es gibt verschiedene Arten - jede reagiert auf einen anderen Reiz:</p>
           <table class="icon-table">
-            <tr><th>Sinneszelle reagiert auf ...</th><th>Beispiel</th></tr>
-            <tr><td>Druck und Berührung</td><td>Du spürst, dass dich jemand antippt.</td></tr>
-            <tr><td>Wärme und Kälte</td><td>Du merkst, ob das Wasser warm oder kalt ist.</td></tr>
-            <tr><td>Schmerz</td><td>Du ziehst die Hand schnell von der heißen Herdplatte weg.</td></tr>
+            <tr><th>Sinneszelle</th><th>reagiert auf ...</th><th>Beispiel</th></tr>
+            <tr><td><strong>Tastkörperchen</strong></td><td>Berührung</td><td>Du spürst, dass dich jemand antippt.</td></tr>
+            <tr><td><strong>Lamellenkörperchen</strong></td><td>Druck</td><td>Du merkst, wie fest du etwas in der Hand drückst.</td></tr>
+            <tr><td><strong>Wärme- und Kältekörperchen</strong></td><td>Temperatur</td><td>Du merkst, ob das Wasser warm oder kalt ist.</td></tr>
+            <tr><td><strong>freie Nervenendigungen</strong></td><td>Schmerz</td><td>Du ziehst die Hand schnell von der heißen Herdplatte weg.</td></tr>
           </table>
           <p>Die Sinneszellen nehmen den <strong>Reiz</strong> auf und schicken die Information über Nerven
           zum Gehirn. (Mehr dazu im nächsten Modul: "Vom Reiz zur Reaktion".)</p>
@@ -356,10 +361,21 @@
           text: "Die Haut ist ein {{blank}}. In der Lederhaut sitzen {{blank}}, die Reize wie Druck, Wärme und Schmerz an das {{blank}} melden.",
           blanks: [
             { correct: "Sinnesorgan", alternatives: ["sinnesorgan"] },
-            { correct: "Sinneszellen", alternatives: ["sinneszellen", "Tastkörperchen", "Tastkörperchen"] },
+            { correct: "Sinneszellen", alternatives: ["sinneszellen", "Tastkörperchen"] },
             { correct: "Gehirn", alternatives: ["gehirn"] }
           ],
           explanation: "Sinneszellen in der Lederhaut nehmen Reize auf und melden sie über Nerven ans Gehirn."
+        },
+        {
+          type: "matching",
+          question: "Ordne jede Sinneszelle dem Reiz zu, auf den sie reagiert:",
+          pairs: [
+            { left: "Tastkörperchen", right: "Berührung" },
+            { left: "Lamellenkörperchen", right: "Druck" },
+            { left: "Wärme- und Kältekörperchen", right: "Temperatur (warm/kalt)" },
+            { left: "freie Nervenendigungen", right: "Schmerz" }
+          ],
+          explanation: "Tastkörperchen = Berührung, Lamellenkörperchen = Druck, Wärme-/Kältekörperchen = Temperatur, freie Nervenendigungen = Schmerz."
         },
         {
           type: "free-text",

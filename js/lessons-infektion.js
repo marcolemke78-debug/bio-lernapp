@@ -110,6 +110,11 @@
             nur vermehren, wenn es eine fremde <strong>Wirtszelle</strong> kapert.
           </div>
 
+          <div class="reading-guide">
+            <strong>So liest du die Bilder unten:</strong> Beide Grafiken sind anklickbar - tippe auf ein Teil
+            (z.B. Zellwand, Geißel, Stacheln, Erbinformation), dann erscheint unter dem Bild, was es ist und wozu es dient.
+          </div>
+
           <h3>Das Bakterium - ein Lebewesen (Einzeller)</h3>
           ${bacteriaSvg}
           <table class="icon-table">
@@ -367,13 +372,16 @@
           explanation: "Erreger = was krank macht; Inkubationszeit = Wartezeit; Symptome = Beschwerden; Übertragung = Ansteckungsweg."
         },
         {
-          type: "matching",
-          question: "Ordne jede Krankheits-Gruppe ihrem Erreger zu:",
-          pairs: [
-            { left: "Grippe, Masern, Erkältung", right: "werden von Viren ausgelöst" },
-            { left: "Salmonellose, Tuberkulose, Scharlach", right: "werden von Bakterien ausgelöst" }
-          ],
-          explanation: "Grippe, Masern und Erkältung werden von Viren ausgelöst; Salmonellose, Tuberkulose und Scharlach von Bakterien."
+          type: "multiple-choice",
+          question: "Welche dieser Krankheiten wird von <strong>Bakterien</strong> ausgelöst?",
+          options: ["Tuberkulose", "Grippe", "Masern", "Erkältung"],
+          correct: 0,
+          explanation: "Richtig! Tuberkulose wird von Bakterien ausgelöst (auch Salmonellose und Scharlach). Antibiotika können dagegen helfen.",
+          wrongExplanations: {
+            1: "Grippe wird von Viren ausgelöst - dagegen helfen keine Antibiotika.",
+            2: "Masern werden von Viren ausgelöst.",
+            3: "Eine Erkältung wird von Viren ausgelöst."
+          }
         },
         {
           type: "multiple-choice",

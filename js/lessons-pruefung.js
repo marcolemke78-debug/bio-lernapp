@@ -7,6 +7,19 @@
  */
 (function () {
 
+  // Kompakter, nummerierter Hautschichten-Querschnitt fuer die Beschriften-Aufgabe.
+  const skinLayersSvg = `
+    <svg viewBox="0 0 360 200" role="img" aria-label="Drei Hautschichten zum Beschriften" style="max-width:360px;width:100%;height:auto;display:block;margin:0.4rem auto;background:#fff;border:1px solid #e5e7eb;border-radius:8px;font-family:sans-serif;">
+      <rect x="44" y="20" width="296" height="44" fill="#e7c9a0"/>
+      <rect x="44" y="64" width="296" height="80" fill="#f6caca"/>
+      <rect x="44" y="144" width="296" height="44" fill="#fdeec0"/>
+      <g font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+        <circle cx="22" cy="42" r="13" fill="#1d4ed8"/><text x="22" y="47">1</text>
+        <circle cx="22" cy="104" r="13" fill="#1d4ed8"/><text x="22" y="109">2</text>
+        <circle cx="22" cy="166" r="13" fill="#1d4ed8"/><text x="22" y="171">3</text>
+      </g>
+    </svg>`;
+
   window.LESSON_DATA = (window.LESSON_DATA || []).concat([
 
     {
@@ -50,6 +63,17 @@
             { left: "Fettgewebe", right: "Unterhaut" }
           ],
           explanation: "Oberhaut (Horn-/Keimschicht), Lederhaut (Drüsen, Gefäße, Sinneszellen), Unterhaut (Fettgewebe)."
+        },
+        {
+          type: "fill-in-blank",
+          question: "Haut beschriften: Trage die drei Hautschichten von außen (1) nach innen (3) ein.",
+          text: skinLayersSvg + "Nr. 1 = {{blank}}, Nr. 2 = {{blank}}, Nr. 3 = {{blank}}.",
+          blanks: [
+            { correct: "Oberhaut", alternatives: ["oberhaut"] },
+            { correct: "Lederhaut", alternatives: ["lederhaut"] },
+            { correct: "Unterhaut", alternatives: ["unterhaut"] }
+          ],
+          explanation: "Von außen nach innen: 1 Oberhaut, 2 Lederhaut, 3 Unterhaut."
         },
         {
           type: "multiple-choice",

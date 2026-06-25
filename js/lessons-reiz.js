@@ -23,52 +23,62 @@
 
   // Reiz-Reaktions-Kette (senkrecht): farbiger Streifen = EVA-Zuordnung
   const chainSvg = `
-    <svg viewBox="0 0 470 470" role="img" aria-label="Reiz-Reaktions-Kette vom Reiz über Sinnesorgan, Nerven und Gehirn bis zur Reaktion" style="max-width:470px;width:100%;height:auto;display:block;margin:1rem auto;font-family:sans-serif;">
+    <div class="clickable-figure">
+    <svg viewBox="0 0 470 470" role="img" aria-label="Reiz-Reaktions-Kette vom Reiz über Sinnesorgan, Nerven und Gehirn bis zur Reaktion" style="max-width:470px;width:100%;height:auto;display:block;margin:0 auto;font-family:sans-serif;">
       <defs>
         <marker id="arr" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
           <path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/>
         </marker>
       </defs>
-      <!-- Box 1: Reiz -->
-      <rect x="70" y="8" width="330" height="44" rx="8" fill="#f3f4f6" stroke="#9ca3af"/>
-      <rect x="70" y="8" width="8" height="44" rx="4" fill="#9ca3af"/>
-      <text x="240" y="30" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2937">Reiz (z.B. heiße Herdplatte)</text>
-      <text x="240" y="46" text-anchor="middle" font-size="10" fill="#6b7280">Einfluss aus der Umwelt</text>
-      <line x1="240" y1="52" x2="240" y2="74" stroke="#6b7280" stroke-width="2" marker-end="url(#arr)"/>
-      <!-- Box 2: Sinnesorgan -->
-      <rect x="70" y="76" width="330" height="44" rx="8" fill="#dcfce7" stroke="#16a34a"/>
-      <rect x="70" y="76" width="8" height="44" rx="4" fill="#16a34a"/>
-      <text x="240" y="98" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803d">Sinnesorgan (Haut, Auge ...)</text>
-      <text x="240" y="114" text-anchor="middle" font-size="10" fill="#1f2937">nimmt den Reiz auf</text>
-      <line x1="240" y1="120" x2="240" y2="142" stroke="#6b7280" stroke-width="2" marker-end="url(#arr)"/>
-      <!-- Box 3: sensorischer Nerv -->
-      <rect x="70" y="144" width="330" height="44" rx="8" fill="#dcfce7" stroke="#16a34a"/>
-      <rect x="70" y="144" width="8" height="44" rx="4" fill="#16a34a"/>
-      <text x="240" y="166" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803d">sensorischer Nerv</text>
-      <text x="240" y="182" text-anchor="middle" font-size="10" fill="#1f2937">leitet die Info zum Gehirn</text>
-      <line x1="240" y1="188" x2="240" y2="210" stroke="#6b7280" stroke-width="2" marker-end="url(#arr)"/>
-      <!-- Box 4: Gehirn -->
-      <rect x="70" y="212" width="330" height="44" rx="8" fill="#fef9c3" stroke="#ca8a04"/>
-      <rect x="70" y="212" width="8" height="44" rx="4" fill="#ca8a04"/>
-      <text x="240" y="234" text-anchor="middle" font-size="13" font-weight="bold" fill="#a16207">Gehirn</text>
-      <text x="240" y="250" text-anchor="middle" font-size="10" fill="#1f2937">verarbeitet und entscheidet</text>
-      <line x1="240" y1="256" x2="240" y2="278" stroke="#6b7280" stroke-width="2" marker-end="url(#arr)"/>
-      <!-- Box 5: motorischer Nerv -->
-      <rect x="70" y="280" width="330" height="44" rx="8" fill="#fee2e2" stroke="#dc2626"/>
-      <rect x="70" y="280" width="8" height="44" rx="4" fill="#dc2626"/>
-      <text x="240" y="302" text-anchor="middle" font-size="13" font-weight="bold" fill="#b91c1c">motorischer Nerv</text>
-      <text x="240" y="318" text-anchor="middle" font-size="10" fill="#1f2937">leitet den Befehl zum Muskel</text>
-      <line x1="240" y1="324" x2="240" y2="346" stroke="#6b7280" stroke-width="2" marker-end="url(#arr)"/>
-      <!-- Box 6: Muskel / Reaktion -->
-      <rect x="70" y="348" width="330" height="44" rx="8" fill="#fee2e2" stroke="#dc2626"/>
-      <rect x="70" y="348" width="8" height="44" rx="4" fill="#dc2626"/>
-      <text x="240" y="370" text-anchor="middle" font-size="13" font-weight="bold" fill="#b91c1c">Muskel / Drüse = Reaktion</text>
-      <text x="240" y="386" text-anchor="middle" font-size="10" fill="#1f2937">z.B. Hand schnell wegziehen</text>
-      <!-- EVA-Klammern rechts -->
-      <text x="430" y="120" text-anchor="middle" font-size="11" font-weight="bold" fill="#15803d" transform="rotate(-90 430 120)">Eingabe</text>
-      <text x="430" y="234" text-anchor="middle" font-size="11" font-weight="bold" fill="#a16207" transform="rotate(-90 430 234)">Verarbeitung</text>
-      <text x="430" y="356" text-anchor="middle" font-size="11" font-weight="bold" fill="#b91c1c" transform="rotate(-90 430 356)">Ausgabe</text>
-    </svg>`;
+      <g class="bio-part" data-name="Reiz" data-info="Ein Einfluss aus der Umwelt (z.B. Hitze). Hier startet die Kette.">
+        <rect x="70" y="8" width="330" height="44" rx="8" fill="#f3f4f6" stroke="#9ca3af"/>
+        <rect x="70" y="8" width="8" height="44" rx="4" fill="#9ca3af"/>
+        <text x="240" y="30" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2937">Reiz (z.B. heiße Herdplatte)</text>
+        <text x="240" y="46" text-anchor="middle" font-size="10" fill="#6b7280">Einfluss aus der Umwelt</text>
+      </g>
+      <g class="bio-part" data-name="Sinnesorgan" data-info="Eingabe (E): Das Sinnesorgan nimmt den Reiz auf - z.B. die Haut spürt die Hitze.">
+        <rect x="70" y="76" width="330" height="44" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+        <rect x="70" y="76" width="8" height="44" rx="4" fill="#16a34a"/>
+        <text x="240" y="98" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803d">Sinnesorgan (Haut, Auge ...)</text>
+        <text x="240" y="114" text-anchor="middle" font-size="10" fill="#1f2937">nimmt den Reiz auf</text>
+      </g>
+      <g class="bio-part" data-name="sensorischer Nerv" data-info="Eingabe (E): Leitet die Information zum Gehirn. Merke: sensorisch = von den Sinnen HIN zum Gehirn.">
+        <rect x="70" y="144" width="330" height="44" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+        <rect x="70" y="144" width="8" height="44" rx="4" fill="#16a34a"/>
+        <text x="240" y="166" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803d">sensorischer Nerv</text>
+        <text x="240" y="182" text-anchor="middle" font-size="10" fill="#1f2937">leitet die Info zum Gehirn</text>
+      </g>
+      <g class="bio-part" data-name="Gehirn" data-info="Verarbeitung (V): Das Gehirn verarbeitet die Information und entscheidet, was zu tun ist.">
+        <rect x="70" y="212" width="330" height="44" rx="8" fill="#fef9c3" stroke="#ca8a04"/>
+        <rect x="70" y="212" width="8" height="44" rx="4" fill="#ca8a04"/>
+        <text x="240" y="234" text-anchor="middle" font-size="13" font-weight="bold" fill="#a16207">Gehirn</text>
+        <text x="240" y="250" text-anchor="middle" font-size="10" fill="#1f2937">verarbeitet und entscheidet</text>
+      </g>
+      <g class="bio-part" data-name="motorischer Nerv" data-info="Ausgabe (A): Leitet den Befehl zum Muskel. Merke: motorisch = zur Bewegung/zum Muskel HIN.">
+        <rect x="70" y="280" width="330" height="44" rx="8" fill="#fee2e2" stroke="#dc2626"/>
+        <rect x="70" y="280" width="8" height="44" rx="4" fill="#dc2626"/>
+        <text x="240" y="302" text-anchor="middle" font-size="13" font-weight="bold" fill="#b91c1c">motorischer Nerv</text>
+        <text x="240" y="318" text-anchor="middle" font-size="10" fill="#1f2937">leitet den Befehl zum Muskel</text>
+      </g>
+      <g class="bio-part" data-name="Muskel / Reaktion" data-info="Ausgabe (A): Der Muskel (oder eine Drüse) führt den Befehl aus = die Reaktion, z.B. Hand wegziehen.">
+        <rect x="70" y="348" width="330" height="44" rx="8" fill="#fee2e2" stroke="#dc2626"/>
+        <rect x="70" y="348" width="8" height="44" rx="4" fill="#dc2626"/>
+        <text x="240" y="370" text-anchor="middle" font-size="13" font-weight="bold" fill="#b91c1c">Muskel / Drüse = Reaktion</text>
+        <text x="240" y="386" text-anchor="middle" font-size="10" fill="#1f2937">z.B. Hand schnell wegziehen</text>
+      </g>
+      <g pointer-events="none">
+        <line x1="240" y1="52" x2="240" y2="74" stroke="#6b7280" stroke-width="2" marker-end="url(#arr)"/>
+        <line x1="240" y1="120" x2="240" y2="142" stroke="#6b7280" stroke-width="2" marker-end="url(#arr)"/>
+        <line x1="240" y1="188" x2="240" y2="210" stroke="#6b7280" stroke-width="2" marker-end="url(#arr)"/>
+        <line x1="240" y1="256" x2="240" y2="278" stroke="#6b7280" stroke-width="2" marker-end="url(#arr)"/>
+        <line x1="240" y1="324" x2="240" y2="346" stroke="#6b7280" stroke-width="2" marker-end="url(#arr)"/>
+        <text x="430" y="120" text-anchor="middle" font-size="11" font-weight="bold" fill="#15803d" transform="rotate(-90 430 120)">Eingabe</text>
+        <text x="430" y="234" text-anchor="middle" font-size="11" font-weight="bold" fill="#a16207" transform="rotate(-90 430 234)">Verarbeitung</text>
+        <text x="430" y="356" text-anchor="middle" font-size="11" font-weight="bold" fill="#b91c1c" transform="rotate(-90 430 356)">Ausgabe</text>
+      </g>
+    </svg>
+    <div class="figure-readout">Tipp: Tippe auf eine Station der Kette, um zu sehen, was dort passiert.</div>
+    </div>`;
 
   window.LESSON_DATA = (window.LESSON_DATA || []).concat([
 
@@ -216,11 +226,35 @@
           text: "Ein {{blank}} ist ein Einfluss aus der Umwelt. Er wird vom {{blank}} aufgenommen. Das {{blank}} verarbeitet die Information, und der Muskel führt die {{blank}} aus.",
           blanks: [
             { correct: "Reiz", alternatives: ["reiz"] },
-            { correct: "Sinnesorgan", alternatives: ["sinnesorgan", "Sinnesorganen"] },
+            { correct: "Sinnesorgan", alternatives: ["sinnesorgan"] },
             { correct: "Gehirn", alternatives: ["gehirn"] },
             { correct: "Reaktion", alternatives: ["reaktion"] }
           ],
           explanation: "Reiz -> Sinnesorgan (Eingabe) -> Gehirn (Verarbeitung) -> Reaktion (Ausgabe)."
+        },
+        {
+          type: "multiple-choice",
+          question: "Welcher Nerv leitet die Information vom Sinnesorgan <strong>zum Gehirn</strong>?",
+          options: [
+            "Der sensorische Nerv",
+            "Der motorische Nerv",
+            "Der Muskel",
+            "Die Drüse"
+          ],
+          correct: 0,
+          explanation: "Richtig! Der sensorische Nerv leitet zum Gehirn hin (sensorisch = von den Sinnen her). Der motorische Nerv leitet vom Gehirn zum Muskel.",
+          wrongExplanations: {
+            1: "Der motorische Nerv leitet den Befehl vom Gehirn zum Muskel - also in die andere Richtung.",
+            2: "Der Muskel ist kein Nerv, er führt die Reaktion aus.",
+            3: "Eine Drüse ist kein Nerv, sie kann die Reaktion ausführen (z.B. Schweiß)."
+          }
+        },
+        {
+          type: "free-text",
+          question: "Erkläre die <strong>Reiz-Reaktions-Kette</strong> am Beispiel der heißen Herdplatte und ordne die Schritte dem <strong>EVA-Prinzip</strong> zu.",
+          hint: "Gehe die Kette der Reihe nach durch (Reiz - Sinnesorgan - Nerv - Gehirn - Nerv - Muskel) und schreibe dazu, was Eingabe, Verarbeitung und Ausgabe ist.",
+          minWords: 25,
+          modelAnswer: "Die heiße Herdplatte ist der Reiz. Die Haut (Sinnesorgan) nimmt ihn auf und der sensorische Nerv leitet die Information zum Gehirn - das ist die Eingabe (E). Das Gehirn verarbeitet die Information und entscheidet 'Hand weg' - das ist die Verarbeitung (V). Der motorische Nerv leitet den Befehl zum Muskel, der die Hand wegzieht - das ist die Ausgabe (A) und zugleich die Reaktion."
         }
       ]
     }

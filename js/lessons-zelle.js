@@ -45,36 +45,44 @@
     <div class="figure-readout">Tipp: Tippe auf einen Zellbestandteil, um Name und Aufgabe zu sehen.</div>
     </div>`;
 
-  // Tierzelle vs. Pflanzenzelle - die 3 pflanzentypischen Teile grün hervorgehoben.
+  // Tierzelle vs. Pflanzenzelle - anklickbar, die 3 pflanzentypischen Teile grün.
   const compareSvg = `
-    <svg viewBox="0 0 640 340" role="img" aria-label="Vergleich Tierzelle und Pflanzenzelle" style="max-width:640px;width:100%;height:auto;display:block;margin:1rem auto;font-family:sans-serif;">
+    <div class="clickable-figure">
+    <svg viewBox="0 0 640 340" role="img" aria-label="Vergleich Tierzelle und Pflanzenzelle" style="max-width:640px;width:100%;height:auto;display:block;margin:0 auto;font-family:sans-serif;">
       <!-- Tierzelle -->
-      <ellipse cx="160" cy="160" rx="125" ry="120" fill="#fdeaf3" stroke="#db2777" stroke-width="3"/>
-      <circle cx="150" cy="140" r="38" fill="#c4b5fd" stroke="#7c3aed" stroke-width="2"/>
-      <circle cx="150" cy="140" r="11" fill="#7c3aed"/>
-      <ellipse cx="100" cy="235" rx="24" ry="13" fill="#fca5a5" stroke="#dc2626" stroke-width="1.5"/>
-      <ellipse cx="215" cy="210" rx="24" ry="13" fill="#fca5a5" stroke="#dc2626" stroke-width="1.5"/>
-      <text x="160" y="320" text-anchor="middle" font-size="16" font-weight="bold" fill="#be185d">Tierzelle</text>
-      <!-- Pflanzenzelle: dicke Zellwand außen -->
-      <rect x="360" y="45" width="240" height="235" rx="14" fill="#dcfce7" stroke="#15803d" stroke-width="6"/>
-      <rect x="372" y="57" width="216" height="211" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
-      <!-- große Vakuole -->
-      <ellipse cx="495" cy="175" rx="78" ry="72" fill="#cfeefe" stroke="#3b82f6" stroke-width="2"/>
-      <!-- Zellkern -->
-      <circle cx="420" cy="100" r="30" fill="#c4b5fd" stroke="#7c3aed" stroke-width="2"/>
-      <circle cx="420" cy="100" r="9" fill="#7c3aed"/>
-      <!-- Chloroplasten (grün) -->
-      <ellipse cx="560" cy="95" rx="17" ry="9" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
-      <ellipse cx="565" cy="240" rx="17" ry="9" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
-      <ellipse cx="405" cy="235" rx="17" ry="9" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
-      <!-- Mitochondrium -->
-      <ellipse cx="415" cy="170" rx="22" ry="12" fill="#fca5a5" stroke="#dc2626" stroke-width="1.5"/>
-      <text x="480" y="320" text-anchor="middle" font-size="16" font-weight="bold" fill="#15803d">Pflanzenzelle</text>
-      <!-- Hinweis-Labels für die 3 Extra-Teile -->
-      <text x="495" y="180" text-anchor="middle" font-size="12" font-weight="bold" fill="#1d4ed8">Vakuole</text>
-      <text x="600" y="40" text-anchor="end" font-size="11" font-weight="bold" fill="#15803d">Zellwand</text>
-      <text x="560" y="78" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803d">Chloroplast</text>
-    </svg>`;
+      <ellipse class="bio-part" data-name="Tierzelle" data-info="Hat Zellkern, Zellmembran, Zellplasma und Mitochondrien - aber KEINE Zellwand, keine Chloroplasten und keine große Vakuole." cx="160" cy="160" rx="125" ry="120" fill="#fdeaf3" stroke="#db2777" stroke-width="3"/>
+      <g class="bio-part" data-name="Zellkern" data-info="Steuert die Zelle, enthält die Erbinformation. Haben beide Zellen.">
+        <circle cx="150" cy="140" r="38" fill="#c4b5fd" stroke="#7c3aed" stroke-width="2"/>
+        <circle cx="150" cy="140" r="11" fill="#7c3aed"/>
+      </g>
+      <g class="bio-part" data-name="Mitochondrien" data-info="Liefern Energie (Kraftwerk). Haben beide Zellen.">
+        <ellipse cx="100" cy="235" rx="24" ry="13" fill="#fca5a5" stroke="#dc2626" stroke-width="1.5"/>
+        <ellipse cx="215" cy="210" rx="24" ry="13" fill="#fca5a5" stroke="#dc2626" stroke-width="1.5"/>
+      </g>
+      <!-- Pflanzenzelle -->
+      <rect class="bio-part" data-name="Zellwand (nur Pflanze)" data-info="Feste Hülle ganz außen, gibt Halt und Form. NUR die Pflanzenzelle hat sie." x="360" y="45" width="240" height="235" rx="14" fill="#dcfce7" stroke="#15803d" stroke-width="6"/>
+      <rect class="bio-part" data-name="Zellplasma (Pflanzenzelle)" data-info="Grundmasse im Inneren, von der Zellmembran umgeben. Haben beide Zellen." x="372" y="57" width="216" height="211" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+      <ellipse class="bio-part" data-name="Vakuole (nur Pflanze)" data-info="Großer Speicherraum mit Zellsaft (Wasser); gibt Halt. NUR die Pflanzenzelle hat eine große Vakuole." cx="495" cy="175" rx="78" ry="72" fill="#cfeefe" stroke="#3b82f6" stroke-width="2"/>
+      <g class="bio-part" data-name="Zellkern" data-info="Steuert die Zelle, enthält die Erbinformation. Haben beide Zellen.">
+        <circle cx="420" cy="100" r="30" fill="#c4b5fd" stroke="#7c3aed" stroke-width="2"/>
+        <circle cx="420" cy="100" r="9" fill="#7c3aed"/>
+      </g>
+      <g class="bio-part" data-name="Chloroplasten (nur Pflanze)" data-info="Grüne Farbstoffe, fangen Sonnenlicht ein. NUR die Pflanzenzelle hat sie.">
+        <ellipse cx="560" cy="95" rx="17" ry="9" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+        <ellipse cx="565" cy="240" rx="17" ry="9" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+        <ellipse cx="405" cy="235" rx="17" ry="9" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+      </g>
+      <ellipse class="bio-part" data-name="Mitochondrium" data-info="Liefert Energie (Kraftwerk). Haben beide Zellen." cx="415" cy="170" rx="22" ry="12" fill="#fca5a5" stroke="#dc2626" stroke-width="1.5"/>
+      <g pointer-events="none">
+        <text x="160" y="320" text-anchor="middle" font-size="16" font-weight="bold" fill="#be185d">Tierzelle</text>
+        <text x="480" y="320" text-anchor="middle" font-size="16" font-weight="bold" fill="#15803d">Pflanzenzelle</text>
+        <text x="495" y="180" text-anchor="middle" font-size="12" font-weight="bold" fill="#1d4ed8">Vakuole</text>
+        <text x="600" y="40" text-anchor="end" font-size="11" font-weight="bold" fill="#15803d">Zellwand</text>
+        <text x="560" y="78" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803d">Chloroplast</text>
+      </g>
+    </svg>
+    <div class="figure-readout">Tipp: Tippe auf einen Zellbestandteil. "Nur Pflanze" = fehlt der Tierzelle.</div>
+    </div>`;
 
   window.LESSON_DATA = (window.LESSON_DATA || []).concat([
 
@@ -224,7 +232,7 @@
           <div class="reading-guide">
             <strong>So liest du das Bild:</strong> Beide Zellen haben Zellkern (lila), Mitochondrien (rot) und eine
             Membran. <strong>Nur die Pflanzenzelle</strong> hat die <strong>dicke grüne Zellwand</strong> außen, die
-            großen <strong>blauen Vakuole</strong> in der Mitte und die grünen <strong>Chloroplasten</strong>.
+            große <strong>blaue Vakuole</strong> in der Mitte und die grünen <strong>Chloroplasten</strong>.
           </div>
 
           <h3>Die 3 Unterschiede der Pflanzenzelle</h3>
@@ -247,10 +255,10 @@
           </div>
 
           <div class="tip-box">
-            <strong>Die 3 Extras der Pflanze merken - "W-C-V":</strong> <strong>W</strong>and,
-            <strong>C</strong>hloroplasten, <strong>V</strong>akuole. Eselsbrücke: Eine Pflanze braucht
-            <em>Wand</em> (Halt), <em>Chloroplasten</em> (Licht) und einen <em>Wassertank</em> (Vakuole) -
-            denn sie kann nicht weglaufen und muss sich selbst versorgen.
+            <strong>Die 3 Extras der Pflanze merken - "W-C-V":</strong>
+            <strong>W</strong>and (Halt), <strong>C</strong>hloroplasten (Licht) und
+            <strong>V</strong>akuole (Wasserspeicher). Diese drei hat nur die Pflanzenzelle -
+            denn sie kann nicht weglaufen und muss sich selbst stützen und versorgen.
           </div>
 
           <div class="warning-box">
@@ -280,7 +288,7 @@
           }
         ]
       },
-      exercisesIntro: "Merke W-C-V: nur die Pflanzenzelle hat Wand, Chloroplasten und (große) Vakuole.",
+      exercisesIntro: compareSvg + "<p>Merke W-C-V: nur die Pflanzenzelle hat Wand, Chloroplasten und (große) Vakuole. Tippe oben die Teile an.</p>",
       exercises: [
         {
           type: "multiple-choice",
