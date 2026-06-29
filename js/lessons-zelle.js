@@ -118,6 +118,18 @@
           <p>Die kleinen grauen Punkte sind <strong>Ribosomen</strong> - an ihnen werden Eiweiße gebaut
           (die "Werkbänke" der Fabrik). Sie musst du nur kennen, nicht im Detail erklären.</p>
 
+          <h3>Zwei weitere Bauteile auf deinem Lernzettel</h3>
+          <p>Auf deinem Lernzettel stehen noch zwei Bauteile, die eng zusammenarbeiten - sie kümmern sich
+          um die <strong>Eiweiße</strong> (wichtige Bausteine der Zelle), die an den <strong>Ribosomen</strong>
+          (den "Werkbänken" von oben) gebaut werden:</p>
+          <table class="icon-table">
+            <tr><th>Bestandteil</th><th>Aufgabe (Funktion)</th><th>In der Fabrik ...</th></tr>
+            <tr><td><strong>Endoplasmatisches Retikulum</strong> (kurz: ER)</td><td>Stellt Eiweiße her und transportiert sie durch die Zelle an ihren Zielort.</td><td>das Fließband / die Lieferwege</td></tr>
+            <tr><td><strong>Golgi-Apparat</strong></td><td>Nimmt Stoffe vom ER an, baut sie um und verpackt sie; bildet auch Zellulose.</td><td>die Verpackung &amp; der Versand</td></tr>
+          </table>
+          <p>Merke dir die Reihenfolge: <strong>ER stellt her und liefert</strong> &rarr;
+          <strong>Golgi-Apparat verpackt und verschickt</strong>. Beide gibt es in Tier- und Pflanzenzellen.</p>
+
           <div class="why-context">
             <strong>Warum lernen wir das?</strong> Auf der KA stehen die "Zellbestandteile". Eine typische Aufgabe:
             einen Bestandteil benennen und seine Aufgabe nennen - oder ihn in der Zeichnung zuordnen.
@@ -202,6 +214,17 @@
             { correct: "Mitochondrien", alternatives: ["mitochondrien", "Mitochondrium"] }
           ],
           explanation: "Zellmembran (Hülle) - Zellkern (Steuerung) - Mitochondrien (Energie)."
+        },
+        {
+          type: "matching",
+          question: "Ordne jedem Bauteil seine Aufgabe zu:",
+          pairs: [
+            { left: "ER", right: "stellt Eiweiße her und transportiert sie (Fließband)" },
+            { left: "Golgi-Apparat", right: "verpackt Stoffe und schickt sie weiter (Versand)" },
+            { left: "Zellkern", right: "steuert die Zelle, enthält die Erbinformation" },
+            { left: "Mitochondrien", right: "liefern die Energie (Kraftwerk)" }
+          ],
+          explanation: "ER = Eiweiße herstellen + transportieren, Golgi-Apparat = verpacken + verschicken, Zellkern = Steuerung, Mitochondrien = Energie."
         }
       ]
     },
