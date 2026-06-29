@@ -15,7 +15,8 @@
     <svg viewBox="0 0 560 410" role="img" aria-label="Schematischer Querschnitt durch die Haut mit den drei Schichten und ihren Bestandteilen" style="max-width:560px;width:100%;height:auto;display:block;margin:0 auto;background:#fff;border:1px solid #e5e7eb;border-radius:10px;font-family:sans-serif;">
       <!-- Schichten (anklickbar) -->
       <rect class="bio-part" data-name="Hornschicht (Oberhaut)" data-info="Äußere Schicht aus toten Zellen. Schützt vor Krankheitserregern, Austrocknung und Verletzungen." x="80" y="40" width="400" height="26" fill="#e7c9a0"/>
-      <rect class="bio-part" data-name="Keimschicht (Oberhaut)" data-info="Bildet ständig neue Hautzellen; enthält Pigment (Melanin) als Schutz vor UV-Strahlung." x="80" y="66" width="400" height="46" fill="#f1dab9"/>
+      <rect class="bio-part" data-name="Keimschicht (Oberhaut)" data-info="Bildet ständig neue Hautzellen, die nach oben wandern und die Hornschicht erneuern (etwa jeden Monat)." x="80" y="66" width="400" height="30" fill="#f1dab9"/>
+      <rect class="bio-part" data-name="Pigmentschicht (Oberhaut)" data-info="Unterster Teil der Oberhaut. Hier bilden Pigmentzellen den Farbstoff Melanin - Schutz vor UV-Strahlung. Zu viel UV kann Sonnenbrand und Hautkrebs verursachen." x="80" y="96" width="400" height="16" fill="#e3c39a"/>
       <rect class="bio-part" data-name="Lederhaut" data-info="Mittlere Schicht mit Schweiß- und Talgdrüsen, Blutgefäßen, Haarwurzeln und Sinneszellen." x="80" y="112" width="400" height="188" fill="#f6caca"/>
       <rect class="bio-part" data-name="Unterhaut" data-info="Besteht aus Fettgewebe: wärmt (Isolierung) und polstert den Körper." x="80" y="300" width="400" height="92" fill="#fdeec0"/>
       <g pointer-events="none">
@@ -145,7 +146,8 @@
           <table class="icon-table">
             <tr><th>Nr.</th><th>Bestandteil</th><th>Schicht</th><th>Funktion (Aufgabe)</th></tr>
             <tr><td><strong>1</strong></td><td>Hornschicht</td><td>Oberhaut</td><td>Außen, aus verhornten <em>toten</em> Zellen. Schützt vor Krankheitserregern, Austrocknung und Verletzungen.</td></tr>
-            <tr><td><strong>2</strong></td><td>Keimschicht <span style="white-space:nowrap">(mit Pigmentschicht)</span></td><td>Oberhaut</td><td>Bildet ständig <em>neue</em> Hautzellen, die nach oben wandern. Im unteren Teil (der <strong>Pigmentschicht</strong>) sitzen die Pigmentzellen mit dem Farbstoff <strong>Melanin</strong> - Schutz vor UV-Strahlung der Sonne.</td></tr>
+            <tr><td><strong>2</strong></td><td>Keimschicht</td><td>Oberhaut</td><td>Bildet ständig <em>neue</em> Hautzellen, die nach oben wandern und so die Hornschicht erneuern (etwa jeden Monat).</td></tr>
+            <tr><td>–</td><td>Pigmentschicht</td><td>Oberhaut (unten)</td><td>Unterster Teil der Oberhaut. Hier bilden Pigmentzellen den Farbstoff <strong>Melanin</strong>. Bei Sonne entsteht mehr Melanin, die Haut wird braun (Schutz vor <strong>UV-Strahlung</strong>). <strong>Zu viel UV</strong> kann <strong>Sonnenbrand</strong> und <strong>Hautkrebs</strong> verursachen.</td></tr>
             <tr><td><strong>3</strong></td><td>Haar</td><td>Lederhaut</td><td>Wächst aus der Lederhaut und ragt durch die Oberhaut nach außen. Schützt und wärmt den Körper.</td></tr>
             <tr><td><strong>4</strong></td><td>Talgdrüse</td><td>Lederhaut</td><td>Gibt Fett (Talg) ab - hält Haut und Haare geschmeidig und schützt vor dem Austrocknen.</td></tr>
             <tr><td><strong>5</strong></td><td>Haarwurzel</td><td>Lederhaut</td><td>Hier wächst das Haar nach (im Haarbalg).</td></tr>
@@ -188,9 +190,9 @@
           },
           {
             label: "Warum wird man braun?",
-            html: `<p>In der <strong>Keimschicht</strong> (Nr. 2) sitzen Pigmentzellen. Bei Sonne bilden sie mehr
-              <strong>Melanin</strong> (brauner Farbstoff) - die Haut wird braun. Das ist ein <strong>Schutz vor
-              UV-Strahlung</strong>.</p>`
+            html: `<p>Ganz unten in der Oberhaut, in der <strong>Pigmentschicht</strong>, sitzen Pigmentzellen.
+              Bei Sonne bilden sie mehr <strong>Melanin</strong> (brauner Farbstoff) - die Haut wird braun. Das ist
+              ein <strong>Schutz vor UV-Strahlung</strong>.</p>`
           },
           {
             label: "Warum schwitzen wir?",
@@ -280,15 +282,20 @@
 
           <h3>Die Haut als Sinnesorgan</h3>
           <p>Die Haut ist eines deiner <strong>fünf Sinnesorgane</strong> (Auge, Ohr, Nase, Zunge, <strong>Haut</strong>).
-          Ihr Sinn ist das <strong>Tasten / Fühlen</strong>. In der Lederhaut liegen verschiedene
-          <strong>Sinneszellen</strong>. Es gibt verschiedene Arten - jede reagiert auf einen anderen Reiz:</p>
+          Ihr Sinn ist das <strong>Tasten / Fühlen</strong>. In der <strong>Lederhaut</strong> - die Druck-Sinneszellen
+          auch in der Unterhaut - liegen verschiedene <strong>Sinneszellen</strong>. Jede Art reagiert auf einen
+          anderen Reiz:</p>
           <table class="icon-table">
-            <tr><th>Sinneszelle</th><th>reagiert auf ...</th><th>Beispiel</th></tr>
-            <tr><td><strong>Tastkörperchen</strong></td><td>Berührung</td><td>Du spürst, dass dich jemand antippt.</td></tr>
-            <tr><td><strong>Lamellenkörperchen</strong></td><td>Druck</td><td>Du merkst, wie fest du etwas in der Hand drückst.</td></tr>
-            <tr><td><strong>Wärme- und Kältekörperchen</strong></td><td>Temperatur</td><td>Du merkst, ob das Wasser warm oder kalt ist.</td></tr>
-            <tr><td><strong>freie Nervenendigungen</strong></td><td>Schmerz</td><td>Du ziehst die Hand schnell von der heißen Herdplatte weg.</td></tr>
+            <tr><th>Sinneszelle</th><th>reagiert auf ...</th><th>Anzahl (ungefähr)</th><th>Beispiel</th></tr>
+            <tr><td><strong>freie Nervenendigungen</strong></td><td>Schmerz</td><td>über 3 Millionen</td><td>Du ziehst die Hand schnell von der heißen Herdplatte weg.</td></tr>
+            <tr><td><strong>Tastkörperchen</strong></td><td>Berührung</td><td>ca. 500.000</td><td>Du spürst, dass dich jemand antippt.</td></tr>
+            <tr><td><strong>Kältekörperchen</strong></td><td>Kälte</td><td>ca. 250.000</td><td>Du merkst, dass das Wasser kalt ist.</td></tr>
+            <tr><td><strong>Wärmekörperchen</strong></td><td>Wärme</td><td>ca. 30.000</td><td>Du merkst, dass das Wasser warm ist.</td></tr>
+            <tr><td><strong>Lamellenkörperchen</strong></td><td>Druck</td><td>besonders viele (Unterhaut)</td><td>Du merkst einen festen Stoß oder Druck.</td></tr>
           </table>
+          <p>Die Anzahl zeigt: Am meisten reagiert die Haut auf <strong>Schmerz</strong> (über 3 Millionen) -
+          das ist ein wichtiges <strong>Warnsystem</strong>. Wärme spüren wir mit den wenigsten Zellen (ca. 30.000) -
+          deshalb merken wir Kälte oft schneller als Wärme.</p>
           <p>Die Sinneszellen nehmen den <strong>Reiz</strong> auf und schicken die Information über Nerven
           zum Gehirn. (Mehr dazu im nächsten Modul: "Vom Reiz zur Reaktion".)</p>
 
@@ -372,10 +379,11 @@
           pairs: [
             { left: "Tastkörperchen", right: "Berührung" },
             { left: "Lamellenkörperchen", right: "Druck" },
-            { left: "Wärme- und Kältekörperchen", right: "Temperatur (warm/kalt)" },
+            { left: "Wärmekörperchen", right: "Wärme" },
+            { left: "Kältekörperchen", right: "Kälte" },
             { left: "freie Nervenendigungen", right: "Schmerz" }
           ],
-          explanation: "Tastkörperchen = Berührung, Lamellenkörperchen = Druck, Wärme-/Kältekörperchen = Temperatur, freie Nervenendigungen = Schmerz."
+          explanation: "Tastkörperchen = Berührung, Lamellenkörperchen = Druck, Wärmekörperchen = Wärme, Kältekörperchen = Kälte, freie Nervenendigungen = Schmerz. (Achtung: Lamellenkörperchen reagieren auf Druck, nicht auf Wärme!)"
         },
         {
           type: "free-text",
